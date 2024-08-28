@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  font-family: AvenirNextLTPro-Bold;
+  background-color: #323232;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 3rem 1rem 3rem;
+}
+@media (min-width: 320px) {
+  .header {
+    padding: 1rem;
+  }
+}
+.header__nav {
+  display: flex;
+  justify-content: flex-start;
+}
+@media (min-width: 320px) {
+  .header__nav {
+    max-width: 320px;
+    height: 5vw;
+  }
+}
+.header__logo {
+  max-height: 20px;
+  max-width: 120px;
+}
+.header__list {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.header__item {
+  list-style: none;
+  color: #FFFFFF;
+}
+.header__link {
+  font-family: AvenirNextLTPro-Bold;
+  color: #E1E1E1;
+  padding: 8px;
+}
+.header__link:hover {
+  color: #FFFFFF;
+}
+.header__link:active {
+  color: #FFFFFF;
+  font-weight: bold;
+  border-bottom: 4px solid #FFFFFF;
+}
+
+.hero {
+  position: relative;
+}
+.hero__img {
+  position: absolute;
+  height: 70vw;
+}
+@media (min-width: 320px) {
+  .hero__img {
+    min-width: 320px;
+  }
+}
+.hero__overlay {
+  position: absolute;
+  background-color: #323232;
+}
+.hero__header {
+  position: absolute;
+  z-index: 1;
+  font-family: AvenirNextLTPro-Bold;
+}/*# sourceMappingURL=bio.css.map */

@@ -1,0 +1,107 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+.header{
+    font-family: AvenirNextLTPro-Bold;
+    background-color:$bandsite-black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    flex-wrap: wrap;
+    padding: 1rem 3rem 1rem 3rem;
+
+    @include mobile{
+      padding: 1rem;
+    }
+
+    &__nav{
+      display: flex;
+      justify-content: flex-start;
+      
+      @include mobile{
+        max-width: 320px;
+        height: 5vw;
+      }
+
+    }
+    &__logo{
+      max-height: 20px;
+      max-width: 120px;
+    }
+
+    &__list{
+      width: inherit;
+      height: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:3rem;
+    }
+
+    &__item{
+      
+      list-style: none;
+      color:$white;
+
+    }
+    &__link{
+      font-family: AvenirNextLTPro-Bold;
+      color:$mercury;
+      padding: 8px;
+
+      &:hover{
+        color: $white;
+      }
+      &:active{
+        color:$white;
+        font-weight: bold;
+        border-bottom: 4px solid $white;
+      }
+    }
+    }
+
+.hero{
+  position:relative;
+  // overflow: hidden;  
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+
+  &__img{
+    position:absolute;
+    height:70vw;
+    // opacity: 0.5;
+
+    @include mobile{
+      min-width:320px;
+      
+    }
+
+  }
+
+  &__overlay{
+    position:absolute;
+    background-color: $bandsite-black;
+    
+  }
+
+ 
+  &__header{
+    position:absolute;
+    z-index: 1;
+    font-family: AvenirNextLTPro-Bold;
+  }
+}
+
+
+
+

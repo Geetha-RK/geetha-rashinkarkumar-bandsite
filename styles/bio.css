@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "AvenirNextLTPro-Regular";
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf), url(../assets/fonts/AvenirNextLTPro.ttf);
+}
+@font-face {
+  font-family: "AvenirNextLTPro-Demi";
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf), url(../assets/fonts/AvenirNextLTProDemi.ttf);
+}
+@font-face {
+  font-family: "AvenirNextLTPro-Bold";
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf), url(../assets/fonts/AvenirNextLTProBold.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +33,11 @@ a {
 @media (min-width: 320px) {
   .header {
     padding: 1rem;
+    width: 100vw;
+    justify-content: center;
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 16px;
+    line-height: 32px;
   }
 }
 .header__nav {
@@ -45,6 +62,12 @@ a {
   align-items: center;
   gap: 3rem;
 }
+@media (min-width: 320px) {
+  .header__list {
+    max-width: 320px;
+    gap: 5rem;
+  }
+}
 .header__item {
   list-style: none;
   color: #FFFFFF;
@@ -65,22 +88,24 @@ a {
 
 .hero {
   position: relative;
-}
-.hero__img {
-  position: absolute;
-  height: 70vw;
-}
-@media (min-width: 320px) {
-  .hero__img {
-    min-width: 320px;
-  }
+  height: 12rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-image: url(../assets/images/hero-bio.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .hero__overlay {
   position: absolute;
   background-color: #323232;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
 }
 .hero__header {
-  position: absolute;
   z-index: 1;
   font-family: AvenirNextLTPro-Bold;
+  color: #FFFFFF;
+  padding: 16px;
 }/*# sourceMappingURL=bio.css.map */

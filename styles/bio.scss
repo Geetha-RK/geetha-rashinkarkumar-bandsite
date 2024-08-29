@@ -18,17 +18,34 @@ a{
     justify-content: center;
     align-items:center;
     flex-wrap: wrap;
-    padding: 1rem;
+    // padding: 1rem;
     height:6rem;
     width: 100vw;
     font-size: 16px;
     line-height: 16px;
 
+    @include tablet{
+      justify-content: flex-start;
+      padding-left:36px;
+      padding-right:36px;
+      gap:3rem;
+    }
+    @include desktop{
+      padding-left: 160px;
+    }
    
     &__nav{
       display: flex;
       justify-content: flex-start;
-      
+      padding-bottom:2rem;
+
+      @include tablet{
+        height:95%;
+        padding: 1px;
+      }
+      // @include desktop{
+      //   // padding: 1rem;
+      // }
       }
 
     &__list{
@@ -39,6 +56,12 @@ a{
       align-items: center;
       gap:5rem;
 
+      @include tablet{
+        gap:3rem;
+      }
+      @include desktop{
+        gap:1.5rem;
+      }
     }
 
     &__item{
@@ -61,7 +84,9 @@ a{
         font-weight: bold;
         border-bottom: 4px solid $white;
       }
+
     }
+    
     }
 
 .hero{
@@ -74,6 +99,12 @@ a{
   background-size: cover;
   background-position: center;
  
+  @include tablet{
+    height:32rem;
+  }
+  @include desktop{
+    height:48rem;
+  }
 
   &__overlay{
     position:absolute;
@@ -89,11 +120,21 @@ a{
     font-family: AvenirNextLTPro-Bold;
     color: $white;
     padding: 16px;
+    font-weight: 700;
+
+    @include tablet{
+      font-size: 60px;
+      padding:3rem; //check
+    }
+    @include desktop{
+      font-size: 60px;
+      padding:8rem;
+    }
   }
 }
 
 .gallery{
-    
+    background-color: $alabaster;
 
   @include tablet{
     padding-left:36px;
@@ -113,6 +154,9 @@ a{
     @include tablet{
       flex-direction: row;
     }
+    @include desktop{
+      flex-direction: row;
+    }
   }
   &__img{
     width:100%;
@@ -122,6 +166,11 @@ a{
     padding-bottom: 1rem;
 
     @include tablet{
+      width: 15rem;
+      height: 10rem;
+      
+    }
+    @include desktop{
       width: 15rem;
       height: 10rem;
       

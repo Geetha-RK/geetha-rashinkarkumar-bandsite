@@ -120,7 +120,7 @@ a {
   width: 100%;
   opacity: 0.5;
 }
-.hero__header {
+.hero__title {
   z-index: 1;
   font-family: AvenirNextLTPro-Bold;
   color: #FFFFFF;
@@ -128,16 +128,60 @@ a {
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .hero__header {
+  .hero__title {
     font-size: 60px;
     padding: 3rem;
   }
 }
 @media (min-width: 1280px) {
-  .hero__header {
+  .hero__title {
     font-size: 60px;
     padding: 8rem;
   }
+}
+
+.about__title {
+  padding: 24px 16px 16px 16px;
+  font-family: AvenirNextLTPro-Bold;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #323232;
+}
+.about__img {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  height: 12rem;
+}
+.about__para {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 1rem;
+  font-family: AvenirNextLTPro-Bold;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  font-style: bold;
+  color: #323232;
+}
+
+.beesarticle__title {
+  font-family: AvenirNextLTPro-Demi;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #323232;
+  padding: 16px;
+}
+.beesarticle__para {
+  font-family: AvenirNextLTPro-Regular;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 0 16px 16px 16px;
+  color: #323232;
 }
 
 .gallery {
@@ -148,10 +192,10 @@ a {
     padding-left: 36px;
   }
 }
-.gallery__header {
+.gallery__title {
   font-family: AvenirNextLTPro-Bold;
   font-weight: 700;
-  padding: 24px 16px 16px 16px;
+  padding: 8px 16px 16px 16px;
 }
 .gallery__imgcontainer {
   display: flex;
@@ -187,4 +231,48 @@ a {
     width: 15rem;
     height: 10rem;
   }
+}
+
+.footer {
+  background-color: #323232;
+  margin-top: 8px;
+}
+.footer__title {
+  padding: 24px 16px 16px 16px;
+  font-family: AvenirNextLTPro-Bold;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.footer__imgcontainer {
+  display: flex;
+  gap: 1rem;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.footer__parabold, .footer__para--contact, .footer__para--email {
+  font-family: AvenirNextLTPro-Bold;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #FFFFFF;
+  padding: 16px;
+}
+.footer__para--contact, .footer__para--email {
+  font-family: AvenirNextLTPro-Regular;
+  padding: 0 16px 0 16px;
+}
+.footer__para--email {
+  padding: 16px;
+}
+.footer__logo {
+  padding: 16px;
+}
+.footer__copyright {
+  font-family: AvenirNextLTPro-Regular;
+  font-size: 11px;
+  line-height: 18px;
+  color: #FFFFFF;
+  padding: 16px;
 }/*# sourceMappingURL=bio.css.map */

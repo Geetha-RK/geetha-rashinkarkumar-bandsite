@@ -372,11 +372,42 @@ a {
   font-weight: 700;
   color: #FFFFFF;
 }
+@media (min-width: 768px) {
+  .footer__title {
+    font-family: AvenirNextLTPro-Demi;
+    padding: 24px 0 16px 0;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__title {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+}
 .footer__imgcontainer {
   display: flex;
   gap: 1rem;
   padding-left: 16px;
   padding-right: 16px;
+}
+@media (min-width: 768px) {
+  .footer__imgcontainer {
+    align-items: center;
+    width: 45%;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__imgcontainer {
+    align-items: center;
+    width: 50%;
+  }
 }
 .footer__parabold, .footer__para--contact, .footer__para--email {
   font-family: AvenirNextLTPro-Bold;
@@ -385,6 +416,20 @@ a {
   line-height: 18px;
   color: #FFFFFF;
   padding: 16px;
+}
+@media (min-width: 768px) {
+  .footer__parabold, .footer__para--contact, .footer__para--email {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__parabold, .footer__para--contact, .footer__para--email {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .footer__para--contact, .footer__para--email {
   font-family: AvenirNextLTPro-Regular;
@@ -396,10 +441,75 @@ a {
 .footer__logo {
   padding: 16px;
 }
+@media (min-width: 768px) {
+  .footer__logo {
+    visibility: hidden;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__logo {
+    visibility: hidden;
+  }
+}
+.footer__logo1 {
+  visibility: hidden;
+}
+@media (min-width: 768px) {
+  .footer__logo1 {
+    visibility: visible;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__logo1 {
+    visibility: visible;
+  }
+}
 .footer__copyright {
   font-family: AvenirNextLTPro-Regular;
   font-size: 11px;
   line-height: 18px;
   color: #FFFFFF;
   padding: 16px;
+}
+@media (min-width: 768px) {
+  .footer__card1 {
+    display: flex;
+    padding: 40px 36px 20px 36px;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__card1 {
+    display: flex;
+    padding: 0 160px 20px 160px;
+  }
+}
+@media (min-width: 768px) {
+  .footer__cardcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 36px 40px 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__cardcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0 160px 40px 160px;
+    gap: 4rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__card2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__card2 {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=bio.css.map */

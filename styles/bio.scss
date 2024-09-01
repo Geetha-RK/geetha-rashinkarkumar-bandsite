@@ -283,7 +283,7 @@ a{
     color:$bandsite-black;
 
     @include tablet{
-      font-family:  AvenirNextLTPro-Bold ;
+      font-family:  AvenirNextLTPro-Bold ; //check here
       padding: 32px 36px 36px 36px;
       
     }
@@ -341,13 +341,31 @@ a{
 .footer{
   background-color: $bandsite-black;
   margin-top: 8px;
+
   &__title{
-    padding: 24px 16px 16px 16px;
+      padding: 24px 16px 16px 16px;
       font-family: AvenirNextLTPro-Bold ;
       font-size: 24px;
       line-height: 32px;
       font-weight: 700;
       color:$white;
+
+      @include tablet{
+        font-family: AvenirNextLTPro-Demi ;
+        padding:24px 0 16px 0;
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 700;
+        color:$white;
+      }
+
+      @include desktop{
+      font-family: AvenirNextLTPro-Demi ;
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 700;
+      color:$white;
+      }
   }
   &__imgcontainer{
     display: flex;
@@ -355,6 +373,14 @@ a{
     padding-left: 16px;
     padding-right: 16px;
 
+    @include tablet{
+      align-items: center;
+      width:45%;
+    }
+    @include desktop{
+      align-items: center;
+      width:50%;
+    }
   }
   &__parabold{
     font-family: AvenirNextLTPro-Bold ;
@@ -363,6 +389,19 @@ a{
     line-height: 18px;
     color:$white;
     padding: 16px;    
+
+    @include tablet{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      // padding: 16px; 
+    }
+    @include desktop{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      // padding: 16px; 
+    }
   }
   &__para--contact{
     @extend .footer__parabold;
@@ -375,8 +414,22 @@ a{
   }
   &__logo{
     padding: 16px;
-    // height:20px;
-    // width:120px; //check tomorrow
+    
+    @include tablet{
+      visibility: hidden;
+    }
+    @include desktop{
+      visibility: hidden;
+    }
+  }
+  &__logo1{
+    visibility: hidden;
+    @include tablet{
+      visibility: visible;
+    }
+    @include desktop{
+      visibility: visible;
+    }
   }
   &__copyright{
     font-family: AvenirNextLTPro-Regular;
@@ -384,5 +437,42 @@ a{
     line-height: 18px;
     color:$white;
     padding: 16px;  
+  }
+  &__card1{
+    @include tablet{
+      display: flex;
+      padding: 40px 36px 20px 36px ;
+      justify-content: space-between;
+    }
+    @include desktop{
+      display: flex;
+      padding:0 160px 20px 160px;
+    }
+  }
+  &__cardcontainer{
+    @include tablet{
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      padding: 0 36px 40px 36px;
+
+    }
+    @include desktop{
+      display: flex;
+      flex-direction:row;
+      justify-content: start;
+      padding: 0 160px 40px 160px;
+      gap:4rem;
+    }
+  }
+  &__card2{
+    @include tablet{
+      display: flex;
+      flex-direction: column;
+    }
+    @include desktop{
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

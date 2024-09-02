@@ -109,13 +109,15 @@ a {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
+.header__link:hover {
+  color: #cb2491;
+}
 @media (min-width: 1280px) {
   .header__link {
     margin-right: 2.25rem;
     margin-left: 2.25rem;
   }
 }
-
 .hero {
   position: relative;
   height: 12rem;
@@ -421,6 +423,11 @@ a {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
+  transition: filter 0.3s ease-in-out;
+  filter: grayscale(100%);
+}
+.gallery__img:hover {
+  filter: grayscale(0%);
 }
 @media (min-width: 768px) and (max-width: 1280px) {
   .gallery__img {
@@ -546,6 +553,10 @@ a {
   .footer__para--email {
     padding: 1rem 1rem 1rem 0;
   }
+}
+.footer__email {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 .footer__logo {
   padding: 1rem;

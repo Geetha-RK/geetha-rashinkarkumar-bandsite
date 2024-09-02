@@ -96,11 +96,18 @@ a{
       margin-bottom:1rem;
       margin-top:1rem;
 
+      &:hover{
+        color:$pink;
+      }
+
       @include desktop{
         margin-right: 2.25rem;
         margin-left: 2.25rem;
      
     }
+      @include tablet{
+        
+      }
   }
 }
 
@@ -337,6 +344,12 @@ a{
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
+    transition: filter 0.3s ease-in-out;
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0%); 
+    }
 
     @include tablet{
 
@@ -427,6 +440,10 @@ a{
     @include desktop{
       padding: 1rem 1rem 1rem 0;
     }
+  }
+  &__email{
+    text-decoration: none;
+    color:$white;
   }
   &__logo{
     padding: 1rem;

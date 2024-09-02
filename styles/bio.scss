@@ -19,18 +19,18 @@ a{
     justify-content: center;
     align-items:center;
     height:6rem;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 1rem;
+    line-height: 1rem;
 
     @include tablet{
       flex-direction: row;
       justify-content: flex-start;
-      padding-left:36px;
-      padding-right:36px;
+      padding-left:2.25rem;
+      padding-right:2.25rem;
       gap:3rem;
     }
     @include desktop{
-      padding-left: 80px;
+      padding-left: 5rem;
     }
    
     &__nav{
@@ -39,13 +39,13 @@ a{
 
       @include tablet{
         height:95%;
-        padding: 1px;
+        // padding: 1px;
       }
     }
     &__logo{
       align-self: center;
       @include desktop{
-        padding-left: 36px;
+        padding-left: 2.25rem;
         // padding-right: 16px;
       }
     }
@@ -96,8 +96,8 @@ a{
       margin-top:1rem;
 
       @include desktop{
-        margin-right: 36px;
-        margin-left: 36px;
+        margin-right: 2.25rem;
+        margin-left: 2.25rem;
      
     }
   }
@@ -133,7 +133,7 @@ a{
     z-index: 1;
     font-family: AvenirNextLTPro-Bold;
     color: $white;
-    padding: 16px;
+    padding: 1rem;
     font-weight: 700;
 
     @include tablet{
@@ -149,9 +149,9 @@ a{
 
 .about{
     &__title{
-      padding: 24px 16px 16px 16px;
+      padding: 1.5rem 1rem 1rem 1rem;
       font-family: AvenirNextLTPro-Bold ;
-      font-size: 24px;
+      font-size: 1.5rem;
       line-height: 32px;
       font-weight: 700;
       color:$bandsite-black;
@@ -256,23 +256,62 @@ a{
     }
 }
 .beesarticle{
-    &__title{
-      font-family: AvenirNextLTPro-Demi;
-      font-size: 14px;
-      line-height: 22px;
-      font-weight: 600;
-      color:$bandsite-black;
-      padding: 16px;
+  &__title{
+    @include font-style('AvenirNextLTPro-Demi',14px,600,22px,$bandsite-black);
+    padding: 16px;
+    
+
+    @include tablet{
+      @include font-style('AvenirNextLTPro-Demi',24px,600,32px,$bandsite-black);
+      padding: 0 36px;
+      width:84%;
+      margin:0 auto; 
+     
+    } 
+    @include desktop{
+      @include font-style('AvenirNextLTPro-Demi',24px,600,32px,$bandsite-black); 
+      padding: 0 10rem;
+      width:92%;
+      margin:0 auto; 
+    } 
+  }
+
+    &__paracontainer{
+      display:flex;
+      flex-direction: column;
+
+      @include tablet{
+        flex-direction: row;
+        padding:36px 101px 12px 101px;
+        // width:100%;
+        gap:2rem;
+      }
+      @include desktop{
+        flex-direction: row;
+        padding:0 10rem;
+        width:80%;
+      }
     }
+   
     &__para{
-      font-family: AvenirNextLTPro-Regular;
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 18px;
-      padding: 0 16px 16px 16px;
-      color:$bandsite-black;
+      @include font-style('AvenirNextLTPro-Regular',13px,400,18px,$bandsite-black); 
+      padding: 0 1rem 1rem 1rem;
+
+      @include tablet{
+        @include font-style('AvenirNextLTPro-Regular',14px,400,22px,$bandsite-black);
+        padding:0;
+
+      }
+      @include desktop{
+        @include font-style('AvenirNextLTPro-Regular',14px,400,22px,$bandsite-black);
+        padding:0;
+        // padding: 0 10rem;
+        // width:92%;
+        // margin:0 auto; 
+      }
     }
 }
+
 .gallery{
     background-color: $alabaster;
 
@@ -332,7 +371,7 @@ a{
       
     }
     @include desktop{
-      width: 24rem;
+      width: 19rem;
       height: 15rem; 
     }
   }
@@ -341,6 +380,8 @@ a{
 .footer{
   background-color: $bandsite-black;
   margin-top: 8px;
+  display: flex;
+  flex-direction: column;
 
   &__title{
       padding: 24px 16px 16px 16px;
@@ -391,44 +432,73 @@ a{
     padding: 16px;    
 
     @include tablet{
+      font-family:AvenirNextLTPro-Demi ;
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
-      // padding: 16px; 
+      padding: 0 0 36px 0;
     }
     @include desktop{
+      font-family:AvenirNextLTPro-Demi;
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
-      // padding: 16px; 
+      padding: 0 0 36px 0;
     }
   }
   &__para--contact{
     @extend .footer__parabold;
     font-family: AvenirNextLTPro-Regular;
     padding:0 16px 0 16px;
+    @include tablet{
+      padding: 0 36px 0 0;
+    }
+    @include desktop{
+      padding: 0 36px 0 0;
+    }
   }
   &__para--email{
     @extend .footer__para--contact;
     padding: 16px;
+
+    @include tablet{
+      padding: 36px 36px 36px 0;
+    }
+    @include desktop{
+      padding: 16px 16px 16px 0;
+    }
   }
   &__logo{
     padding: 16px;
-    
+    width:120px;
+
     @include tablet{
+      width:0;
+      height:0;
       visibility: hidden;
+      padding: 0;
     }
     @include desktop{
+      width:0;
+      height:0;
+      padding: 0;
       visibility: hidden;
     }
   }
   &__logo1{
     visibility: hidden;
+
     @include tablet{
       visibility: visible;
+      width:120px;
+      height:20px;
+
     }
     @include desktop{
       visibility: visible;
+      width:120px;
+      height:20px;
+      flex-grow:2;
     }
   }
   &__copyright{
@@ -436,17 +506,35 @@ a{
     font-size: 11px;
     line-height: 18px;
     color:$white;
-    padding: 16px;  
+    padding: 16px; 
+
+    @include tablet{
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 14px;
+    line-height: 20px;
+    color:$white;
+    padding: 0 36px 80px 36px;  
+    }
+    @include desktop{
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 14px;
+      line-height: 20px;
+      color:$white;
+      padding: 0 160px 80px 160px;  
+    }
   }
   &__card1{
     @include tablet{
       display: flex;
-      padding: 40px 36px 20px 36px ;
+      padding: 40px 36px 36px 36px ;
       justify-content: space-between;
+      align-items: center;
     }
     @include desktop{
       display: flex;
-      padding:0 160px 20px 160px;
+      justify-content: flex-start;
+      gap:2.5rem;
+      padding:40px 160px 20px 160px;
     }
   }
   &__cardcontainer{
@@ -460,7 +548,7 @@ a{
     @include desktop{
       display: flex;
       flex-direction:row;
-      justify-content: start;
+      justify-content: flex-start;
       padding: 0 160px 40px 160px;
       gap:4rem;
     }

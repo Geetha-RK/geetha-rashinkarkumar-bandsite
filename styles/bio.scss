@@ -45,6 +45,8 @@ a{
     }
     &__logo{
       align-self: center;
+      width:120px;
+      height:20px;
 
       @include desktop{
         padding-left: 2.25rem;
@@ -77,7 +79,7 @@ a{
 
       &:active{
         color:$white;
-        font-weight: bold;
+        font-family: 'AvenirNextLTPro-Bold';
         border-bottom: 4px solid $white;
       }
       @include tablet{
@@ -91,8 +93,9 @@ a{
     }
 
     &__link{
-      font-family: 'AvenirNextLTPro-Bold';
-      color:$mercury;
+      // font-family: 'AvenirNextLTPro-Bold';
+      // color:$mercury;
+      @include font-style('AvenirNextLTPro-Regular',16px,400,22px,$mercury);
       margin-bottom:1rem;
       margin-top:1rem;
 

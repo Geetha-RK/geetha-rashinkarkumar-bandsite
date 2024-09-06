@@ -3,15 +3,14 @@
 @use './variables' as *;
 
 .header{
-    font-family: 'AvenirNextLTPro-Demi';
+    @include font-style('Avenir',1rem,600,1rem,$white);
     background-color:$bandsite-black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
     height:6rem;
-    font-size: 1rem;
-    line-height: 1rem;
+
 
     @include tablet{
       flex-direction: row;
@@ -27,6 +26,7 @@
     }
    
     &__nav{
+     
       display: flex;
       justify-content: flex-start;
 
@@ -38,9 +38,12 @@
       align-self: center;
       width:120px;
       height:20px;
-
+      @include tablet{
+        
+      }
       @include desktop{
-        padding-left: 2.25rem;
+        width:120px;
+        height:20px;
       }
     }
     &__list{
@@ -64,13 +67,16 @@
       width:100%;
       text-align: center;
       
+      
       &:hover{
         color: $white;
+        
       }
 
       &:active{
         color:$white;
-        font-family: 'AvenirNextLTPro-Bold';
+        font-family: 'Avenir';
+        font-weight:700;
         border-bottom: 4px solid $white;
       }
       @include tablet{
@@ -86,12 +92,13 @@
     &__link{
       // font-family: 'AvenirNextLTPro-Bold';
       // color:$mercury;
-      @include font-style('AvenirNextLTPro-Regular',16px,400,22px,$mercury);
+      @include font-style('Avenir',16px,400,22px,$mercury);
       margin-bottom:1rem;
       margin-top:1rem;
 
       &:hover{
         color:$pink;
+        font-weight:700;
       }
 
       @include desktop{
@@ -113,15 +120,15 @@
   
     &__title{
         padding: 24px 16px 16px 16px;
-        @include font-style('AvenirNextLTPro-Bold',24px,700,32px,$white);
+        @include font-style('Avenir',24px,700,32px,$white);
         
         @include tablet{
-          @include font-style('AvenirNextLTPro-Demi',36px,700,44px,$white);
+          @include font-style('Avenir',36px,600,44px,$white);
           padding:24px 0 16px 0;
         }
   
         @include desktop{
-          @include font-style('AvenirNextLTPro-Demi',36px,700,44px,$white);
+          @include font-style('Avenir',36px,600,44px,$white);
           padding:0;
         }
     }
@@ -142,22 +149,23 @@
       }
     }
     &__parabold{
-      @include font-style('AvenirNextLTPro-Bold',13px,400,18px,$white);
+      @include font-style('Avenir',13px,400,18px,$white);
       padding: 1rem;    
   
       @include tablet{
-        @include font-style('AvenirNextLTPro-Demi',14px,400,20px,$white);
+        @include font-style('Avenir',14px,600,20px,$white);
         padding: 0 0 2.25rem 0;
       }
   
       @include desktop{
-        @include font-style('AvenirNextLTPro-Demi',14px,400,20px,$white);
+        @include font-style('Avenir',14px,600,20px,$white);
         padding: 0 0 2.25rem 0;
       }
     }
     &__para--contact{
       @extend .footer__parabold;
-      font-family: 'AvenirNextLTPro-Regular';
+      font-family: 'Avenir';
+      font-weight:400;
       padding:0 1rem 0 1rem;
   
       @include tablet{
@@ -219,15 +227,15 @@
       }
     }
     &__copyright{
-      @include font-style('AvenirNextLTPro-Regular',11px,200,18px,$white);
+      @include font-style('Avenir',11px,200,18px,$white);
       padding: 1rem; 
   
       @include tablet{
-        @include font-style('AvenirNextLTPro-Regular',14px,400,20px,$white);
+        @include font-style('Avenir',14px,400,20px,$white);
         padding: 0 2.25rem 5rem 2.25rem;  
       }
       @include desktop{
-        @include font-style('AvenirNextLTPro-Regular',14px,400,20px,$white);
+        @include font-style('Avenir',14px,400,20px,$white);
         padding: 0 10rem 5rem 10rem;  
       }
     }

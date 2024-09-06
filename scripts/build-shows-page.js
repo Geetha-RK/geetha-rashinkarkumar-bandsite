@@ -66,6 +66,10 @@ shows.forEach((show)=>{
     buyButton.classList.add("shows__button");
     buyButton.textContent='Buy Tickets';
 
+    const hrborder = document.createElement("hr");
+    hrborder.classList.add("shows__hrborder");
+    
+
     showsEl.appendChild(lable);
     showsEl.appendChild(showsDate);
     showsEl.appendChild(venue);
@@ -73,6 +77,7 @@ shows.forEach((show)=>{
     showsEl.appendChild(location);
     showsEl.appendChild(showsLocation);
     showsEl.appendChild(buyButton);
+    showsEl.appendChild(hrborder);
     
 });
 

@@ -41,17 +41,16 @@ a{
  
   &__title{  
     z-index: 1;
-    font-family: 'AvenirNextLTPro-Bold';
-    color: $white;
+    @include font-style('Avenir',24px,700,32px,$white);
     padding: 1rem;
-    font-weight: 700;
 
     @include tablet{
-      font-size: 60px;
+      @include font-style('Avenir',60px,700,32px,$white);
+     
       padding:3rem; 
     }
     @include desktop{
-      font-size: 60px;
+      @include font-style('Avenir',60px,700,32px,$white);
       padding:8rem;
     }
   }
@@ -60,17 +59,17 @@ a{
 .about{
     &__title{
       padding: 1.5rem 1rem 1rem 1rem;
-      @include font-style('AvenirNextLTPro-Bold',24px,700,32px,$bandsite-black);
+      @include font-style('Avenir',24px,700,32px,$bandsite-black);
       width:100%;
 
        @include tablet{
        padding:48px 36px 36px 36px;
-       @include font-style('AvenirNextLTPro-Bold',36px,700,44px,$bandsite-black);
+       @include font-style('Avenir',36px,700,44px,$bandsite-black);
       }
 
       @include desktop{
        padding:48px 160px 36px 160px;
-       @include font-style('AvenirNextLTPro-Bold',36px,700,44px,$bandsite-black);
+       @include font-style('Avenir',36px,700,44px,$bandsite-black);
       }
     }
 
@@ -95,7 +94,7 @@ a{
       }
     }
     &__para{
-      @include font-style('AvenirNextLTPro-Bold',13px,400,20px,$bandsite-black);
+      @include font-style('Avenir',13px,700,20px,$bandsite-black);
       padding-left: 1rem;
       padding-right: 1rem;
       padding-bottom: 1rem;
@@ -106,12 +105,12 @@ a{
         display: flex;
         margin:0 auto;
         padding: 0 80px 0 80px;
-        @include font-style('AvenirNextLTPro-Demi',24px,600,32px,$bandsite-black);
+        @include font-style('Avenir',24px,600,32px,$bandsite-black);
         font-style: bold;
         width:95%;
       }
       @include desktop{
-        @include font-style('AvenirNextLTPro-Demi',24px,600,32px,$bandsite-black);
+        @include font-style('Avenir',24px,600,32px,$bandsite-black);
         display: flex;
         margin:0 13.75rem;
         padding: 0;
@@ -120,7 +119,7 @@ a{
     }
     &__para--modified{
       @include tablet{
-        @include font-style('AvenirNextLTPro-Demi',19px,600,22px,$bandsite-black);
+        @include font-style('Avenir',19px,600,22px,$bandsite-black);
         display: flex;
         margin:0 auto;
         padding: 1rem 5rem 2.25rem 5rem;
@@ -128,7 +127,7 @@ a{
         
       }
       @include desktop{
-        @include font-style('AvenirNextLTPro-Demi',19px,600,22px,$bandsite-black);
+        @include font-style('Avenir',19px,600,22px,$bandsite-black);
         display: flex;
         margin:0 auto;
         padding: 1rem 5rem 2.25rem 5rem;
@@ -138,19 +137,19 @@ a{
 }
 .beesarticle{
   &__title{
-    @include font-style('AvenirNextLTPro-Demi',14px,600,22px,$bandsite-black);
+    @include font-style('Avenir',14px,600,22px,$bandsite-black);
     padding: 1rem;
     
 
     @include tablet{
-      @include font-style('AvenirNextLTPro-Demi',24px,600,32px,$bandsite-black);
+      @include font-style('Avenir',24px,600,32px,$bandsite-black);
       padding: 0 2.25rem;
       width:84%;
       margin:0 auto; 
      
     } 
     @include desktop{
-      @include font-style('AvenirNextLTPro-Demi',24px,600,32px,$bandsite-black); 
+      @include font-style('Avenir',24px,600,32px,$bandsite-black); 
       padding: 0 10rem;
       width:92%;
       margin:0 auto; 
@@ -174,17 +173,17 @@ a{
     }
    
     &__para{
-      @include font-style('AvenirNextLTPro-Regular',13px,400,18px,$bandsite-black); 
+      @include font-style('Avenir',13px,400,18px,$bandsite-black); 
       padding: 0 1rem 1rem 1rem;
 
       @include tablet{
-        @include font-style('AvenirNextLTPro-Regular',14px,400,22px,$bandsite-black);
+        @include font-style('Avenir',14px,400,22px,$bandsite-black);
         padding:0;
         text-align:left;
       }
 
       @include desktop{
-        @include font-style('AvenirNextLTPro-Regular',14px,400,200%,$bandsite-black);
+        @include font-style('Avenir',14px,400,200%,$bandsite-black);
         padding:0;
         width:47%;
         text-align:left;
@@ -204,19 +203,17 @@ a{
     background-color: $alabaster;
 
   &__title{
-    font-family:  'AvenirNextLTPro-Bold' ;
-    font-weight: 700;
+    @include font-style('Avenir',24px,700,32px,$bandsite-black);
     padding: 0.5rem 1rem 1rem 1rem;
-    color:$bandsite-black;
-
+    
     @include tablet{
-      font-family:  'AvenirNextLTPro-Bold' ; 
+      @include font-style('Avenir',36px,700,44px,$bandsite-black);
       padding: 2rem 2.25rem 2.25rem 2.25rem;
       
     }
     @include desktop{
       padding: 2rem 5rem 2.25rem 5rem;
-      @include font-style('AvenirNextLTPro-Bold',36px,700,44px,$bandsite-black);
+      @include font-style('Avenir',36px,700,44px,$bandsite-black);
     }
     
   }
@@ -270,3 +267,7 @@ a{
   }
 }
 
+.form{
+  display:flex;
+  flex-direction:column;
+}

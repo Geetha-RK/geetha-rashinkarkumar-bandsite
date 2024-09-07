@@ -1,19 +1,19 @@
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
   src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype"), url(../assets/fonts/AvenirNextLTPro.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
   src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype"), url(../assets/fonts/AvenirNextLTProDemi.ttf) format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
   src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype"), url(../assets/fonts/AvenirNextLTProBold.ttf) format("truetype");
   font-weight: 700;
   font-style: bold;
@@ -709,7 +709,84 @@ a {
   }
 }
 
+.conversation {
+  padding: 16px;
+}
+.conversation__title {
+  font-family: "Avenir";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #323232;
+}
+
 .form {
   display: flex;
   flex-direction: column;
+  width: 320px;
+  padding: 16px;
+}
+.form__partition {
+  display: flex;
+  flex-direction: row;
+}
+.form__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 20%;
+  border-radius: 50%;
+  margin: 0.5rem;
+  background-color: #E1E1E1;
+}
+.form__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.form__table {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+}
+.comment__align {
+  display: flex;
+  flex-direction: row;
+}
+.comment__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 20%;
+  border-radius: 50%;
+  margin: 0.5rem;
+  background-color: #E1E1E1;
+}
+.comment__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.comment__main {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 16px 0;
+  width: 80%;
+}
+.comment__head {
+  display: flex;
+  justify-content: space-between;
+}
+.comment__name {
+  padding: 0.5rem;
 }/*# sourceMappingURL=bio.css.map */

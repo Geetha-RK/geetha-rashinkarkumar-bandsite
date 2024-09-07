@@ -251,7 +251,6 @@ a{
     }
 
     @include tablet{
-
       width: 32%;
       height: 10rem;
       padding:0;
@@ -267,7 +266,97 @@ a{
   }
 }
 
+.conversation{
+  padding:16px;
+  &__title{
+    @include font-style('Avenir',24px,700,32px,$bandsite-black);
+  }
+}
+
 .form{
   display:flex;
   flex-direction:column;
+  width:320px;
+  padding:16px;
+
+  &__partition{
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:2.5rem;
+    width:20%;
+    border-radius: 50%; 
+    margin:0.5rem;
+    background-color: #E1E1E1;
+  }
+
+  &__img{
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__table{
+    display: flex;
+    flex-direction: column;
+  }
+
+  // &__namelable{
+
+  // }
+
+}
+
+.comment{
+  display:flex;
+  flex-direction: column;
+  // padding:16px;
+  // width:320px;
+
+  &__align{
+    display: flex;
+    flex-direction: row;
+  }
+  &__avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:2.5rem;
+    width:20%;
+    border-radius: 50%; 
+    margin:0.5rem;
+    background-color: #E1E1E1;
+  }
+
+  &__img{
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+    object-fit: cover;
+   }
+
+  &__main{
+    display: flex;
+    flex-direction: column;
+    padding:16px 16px 16px 0;
+    width:80%;
+  }
+  &__head{
+    display: flex;
+    
+    justify-content: space-between;
+    
+  }
+  &__name{
+    padding:0.5rem;
+  }
+  //  &__date{
+  //   align-self: flex-end;
+  //  }
 }

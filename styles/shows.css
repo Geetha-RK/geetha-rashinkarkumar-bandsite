@@ -387,12 +387,22 @@ a {
     height: 37rem;
   }
 }
+@media (min-width: 1280px) {
+  .hero {
+    height: 45rem;
+  }
+}
 .hero__overlay {
   position: absolute;
   background-color: #323232;
   height: 100%;
   width: 100%;
   opacity: 0.5;
+}
+@media (min-width: 1280px) {
+  .hero__desktop {
+    display: flex;
+  }
 }
 .hero__title {
   z-index: 1;
@@ -412,6 +422,17 @@ a {
     line-height: 68px;
     color: #FFFFFF;
     padding: 0 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__title {
+    font-family: "Avenir";
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 68px;
+    color: #FFFFFF;
+    padding-left: 9rem;
+    width: 53%;
   }
 }
 .hero__copy {
@@ -434,6 +455,17 @@ a {
     padding-bottom: 2rem;
   }
 }
+@media (min-width: 1280px) {
+  .hero__copy {
+    font-family: "Avenir";
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    color: #FFFFFF;
+    padding: 10rem 9rem;
+    padding-bottom: 2rem;
+  }
+}
 .hero__iframe {
   z-index: 1;
   padding: 1rem;
@@ -443,6 +475,12 @@ a {
     padding-left: 2rem;
     width: 60%;
     height: 13rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__iframe {
+    width: 40%;
+    height: 10rem;
   }
 }
 
@@ -456,6 +494,19 @@ a {
     width: 100%;
     padding: 0 36px;
     padding-bottom: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .shows {
+    width: 100%;
+    padding-left: 144px;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__divmain {
+    padding-top: 42px;
+    width: 70%;
   }
 }
 .shows__title {
@@ -476,11 +527,30 @@ a {
     color: #000000;
   }
 }
+@media (min-width: 1280px) {
+  .shows__title {
+    font-family: "Avenir";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    color: #000000;
+    width: 25%;
+  }
+}
 @media (min-width: 768px) {
   .shows__theader {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__theader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
   }
 }
 .shows__content {
@@ -509,6 +579,11 @@ a {
     width: 12rem;
   }
 }
+@media (min-width: 1280px) {
+  .shows__label-date, .shows__lable-location, .shows__lable-venue {
+    width: 13rem;
+  }
+}
 .shows__lable-venue {
   padding: 0.5rem 1rem 0 1rem;
 }
@@ -516,6 +591,11 @@ a {
   .shows__lable-venue {
     padding: 0;
     width: 10rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__lable-venue {
+    width: 11rem;
   }
 }
 .shows__lable-location {
@@ -593,6 +673,12 @@ a {
   .shows__button {
     width: 27%;
     margin: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__button {
+    width: 22%;
+    margin: 1rem;
   }
 }
 .shows__hrborder {

@@ -25,13 +25,20 @@ a{
     @include tablet{
       height:37rem;
     }
-
+    @include desktop{
+      height:45rem;
+    }
     &__overlay{
         position:absolute;
         background-color: $bandsite-black;
         height:100%;
         width:100%;
         opacity: 0.5;
+      }
+      &__desktop{
+        @include desktop{
+           display:flex;
+        }
       }
 
       &__title{  
@@ -45,6 +52,12 @@ a{
           padding:0 2rem;
           // padding-bottom: 2rem;
         }
+
+        @include desktop{
+          @include font-style('Avenir',60px,600,68px,$white);
+          padding-left:9rem;
+          width:53%;
+        }
         
     }
     &__copy{
@@ -57,6 +70,11 @@ a{
           padding:5rem 2rem;
           padding-bottom: 2rem;
         }
+        @include desktop{
+          @include font-style('Avenir',36px,600,44px,$white);
+          padding:10rem 9rem;
+          padding-bottom: 2rem;
+        }
     }
     &__iframe{
       z-index: 1;
@@ -66,6 +84,10 @@ a{
         padding-left:2rem;
         width:60%;
         height:13rem;
+      }
+      @include desktop{
+        width:40%;
+        height:10rem;
       }
     }
 }
@@ -80,11 +102,18 @@ a{
     padding: 0 36px;
     padding-bottom: 36px;
   }
-  // @include desktop{
-  //   width:100%;
-  //   padding: 0 36px;
-    
-  // }
+  @include desktop{
+    width:100%;
+    padding-left: 144px;;
+    flex-direction: row;
+  }
+
+  &__divmain{
+    @include desktop{
+      padding-top:42px;
+      width:70%;
+    }
+  }
 
   &__title{
     @include font-style('Avenir',24px,700,32px,$bandsite-darkblack);
@@ -94,6 +123,10 @@ a{
       padding:42px 0;
       @include font-style('Avenir',40px,700,44px,$bandsite-darkblack);
     }
+    @include desktop{
+      @include font-style('Avenir',40px,700,44px,$bandsite-darkblack);
+      width:25%;
+    }
   }
   &__theader{
     @include tablet{
@@ -102,6 +135,13 @@ a{
 
       justify-content: flex-start;
       align-items: center;
+    }
+    @include desktop{
+      display:flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
     }
   }
   &__content{
@@ -123,6 +163,9 @@ a{
       padding:0;
       width:12rem;
     }
+    @include desktop{
+      width:13rem;
+    }
   }
   &__lable-venue{
     @extend .shows__label-date;
@@ -131,6 +174,10 @@ a{
       padding:0;
       width:10rem;
     }
+    @include desktop{
+      width:11rem;
+    }
+   
   }
   &__lable-location{
     @extend .shows__label-date;
@@ -185,6 +232,11 @@ a{
     @include tablet{
       width:27%;
       margin:0;
+    }
+
+    @include desktop{
+      width:22%;
+      margin:1rem;
     }
 
   }

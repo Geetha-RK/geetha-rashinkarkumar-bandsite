@@ -75,8 +75,15 @@ a{
   flex-direction:column;
   width:320px;
 
-  // @include tablet{
-  //   flex-direction: row;
+  @include tablet{
+    width:100%;
+    padding: 0 36px;
+    padding-bottom: 36px;
+  }
+  // @include desktop{
+  //   width:100%;
+  //   padding: 0 36px;
+    
   // }
 
   &__title{
@@ -84,49 +91,100 @@ a{
     padding: 1rem;
 
     @include tablet{
-      padding:42px 36px;
+      padding:42px 0;
       @include font-style('Avenir',40px,700,44px,$bandsite-darkblack);
+    }
+  }
+  &__theader{
+    @include tablet{
+      display:flex;
+      // gap:6rem;
+
+      justify-content: flex-start;
+      align-items: center;
     }
   }
   &__content{
     width:320px;
+    padding-top: 16px;
+
+    @include tablet{
+      width:100%;
+      display:flex;
+      padding:16px 0;
+      justify-content: space-between;
+    }
   }
   &__label-date{
-    @include font-style('Avenir',13px,600,20px,$silver);
+    @include font-style('Avenir',13px,700,20px,$silver);
     padding: 1rem 1rem 0 1rem;
+
+    @include tablet{
+      padding:0;
+      width:12rem;
+    }
   }
   &__lable-venue{
     @extend .shows__label-date;
     padding: 0.5rem 1rem 0 1rem;
+    @include tablet{
+      padding:0;
+      width:10rem;
+    }
   }
   &__lable-location{
     @extend .shows__label-date;
     padding: 0.5rem 1rem 0 1rem;
+    @include tablet{
+      padding:0;
+    }
   }
 
   &__date{
     @include font-style('Avenir',16px,700,20px,$bandsite-darkblack);
     padding:0.5rem 1rem 1rem 1rem;
+    @include tablet{
+      padding:0;
+      display:flex;
+      align-items: center;
+      width:10rem;
+    }
   }
   &__venue{
     @include font-style('Avenir',16px,400,20px,$bandsite-darkblack);
     padding:0.5rem 1rem 1rem 1rem;
+    @include tablet{
+      display:flex;
+      align-items: center;
+      padding:0;
+      width:8rem;
+    }
   }
   &__location{
     @include font-style('Avenir',16px,400,20px,$bandsite-darkblack);
     padding:0.5rem 1rem 0 1rem;
+    @include tablet{
+      display:flex;
+      align-items: center;
+      padding:0;
+    }
   }
   &__button{
     margin:1rem;
     border-radius: 4px;
     height:40px;
-    width:100%;
+    width:90%;
     background-color: $bandsite-black;
     text-transform: uppercase;
     @include font-style('Avenir',16px,600,20px,$white);
 
     &:hover{
       background-color: $bandsite-darkblack;
+    }
+
+    @include tablet{
+      width:27%;
+      margin:0;
     }
 
   }

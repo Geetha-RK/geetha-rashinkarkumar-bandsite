@@ -21,12 +21,7 @@ const reviews=[
         picture:"./assets/images/Mohan-muruge.jpg",
     }
 ];
-///form
-//div partition  form__partition
-//  div avatar  form__avatar 
-//  - img form__img
-//  div formTable form__table
-//
+
     const partition = document.createElement("div");
     partition.classList.add("form__partition");
     formEl.appendChild(partition);
@@ -38,6 +33,7 @@ const reviews=[
     const formImg = document.createElement("img");
     formImg.classList.add("form__img");
     const imageUrl = "./assets/images/Mohan-muruge.jpg";
+
     if(imageUrl){
         formImg.src=imageUrl;          
 
@@ -92,7 +88,6 @@ const reviews=[
     formEl.appendChild(hrborder);
 
     const commentSection = document.querySelector(".comment-section");
-    // console.log(commentSection);
 
     formEl.addEventListener("submit",(event)=>{
         event.preventDefault();
@@ -100,16 +95,12 @@ const reviews=[
         console.log(event);
         
         let form=event.target;
-        
-        // console.log(form.reviewerName);
 
         const name=form.reviewerName.value;
         const comment=form.formComment.value;
 
-        // console.log(name,comment);
-
         function formatDateToMMDDYYYY(date) {
-            const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const month = String(date.getMonth() + 1).padStart(2, '0'); 
             const day = String(date.getDate()).padStart(2, '0');
             const year = date.getFullYear();
             
@@ -125,9 +116,6 @@ const reviews=[
         
         reviews.push(newArray);
         form.reset();
-
-        // console.table(reviews);
-        // console.log("checkhere")
 
         display();  
     });
@@ -147,12 +135,6 @@ const reviews=[
     display();  
 
     function displayComment(review){
-
-        console.log(review.name);
-        console.log(review.date);
-        console.log(review.comment);
-
-        
 
         const align = document.createElement("div");
         align.classList.add("comment__align");

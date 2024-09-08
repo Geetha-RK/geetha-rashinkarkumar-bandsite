@@ -441,7 +441,7 @@ a {
 }
 @media (min-width: 768px) {
   .about__title {
-    padding: 48px 36px 36px 36px;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
     font-family: "Avenir";
     font-size: 36px;
     font-weight: 700;
@@ -451,7 +451,7 @@ a {
 }
 @media (min-width: 1280px) {
   .about__title {
-    padding: 48px 160px 36px 160px;
+    padding: 3rem 10rem 2.25rem 10rem;
     font-family: "Avenir";
     font-size: 36px;
     font-weight: 700;
@@ -460,14 +460,14 @@ a {
   }
 }
 .about__img {
-  padding: 0 16px 16px 16px;
+  padding: 0 1rem 1rem 1rem;
   width: 100%;
   height: 12rem;
 }
 @media (min-width: 768px) {
   .about__img {
     display: flex;
-    padding: 0 80px 36px 80px;
+    padding: 0 5rem 2.25rem 5rem;
     width: 95%;
     height: 25rem;
     margin: 0 auto;
@@ -476,7 +476,7 @@ a {
 @media (min-width: 1280px) {
   .about__img {
     display: flex;
-    padding: 0 80px 36px 80px;
+    padding: 0 5rem 2.25rem 5rem;
     margin: 0 auto;
     width: 80%;
     height: 36.25rem;
@@ -498,7 +498,7 @@ a {
   .about__para {
     display: flex;
     margin: 0 auto;
-    padding: 0 80px 0 80px;
+    padding: 0 5rem 0 5rem;
     font-family: "Avenir";
     font-size: 24px;
     font-weight: 600;
@@ -718,17 +718,17 @@ a {
 }
 
 .conversation {
-  padding: 16px;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .conversation {
-    padding: 36px;
+    padding: 2.25rem;
     padding-bottom: 0;
   }
 }
 @media (min-width: 1280px) {
   .conversation {
-    padding: 80px;
+    padding: 5rem;
     padding-bottom: 0;
   }
 }
@@ -748,22 +748,31 @@ a {
     color: #323232;
   }
 }
+@media (min-width: 1280px) {
+  .conversation__title {
+    font-family: "Avenir";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    color: #323232;
+  }
+}
 
 .form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 16px 0;
+  padding: 1rem 0;
 }
 @media (min-width: 768px) {
   .form {
-    padding: 36px;
+    padding: 2.25rem;
     padding-bottom: 0;
   }
 }
 @media (min-width: 1280px) {
   .form {
-    padding: 36px 250px 0 250px;
+    padding: 2.25rem 15.625rem 0 15.625rem;
   }
 }
 .form__partition {
@@ -819,8 +828,8 @@ a {
   font-weight: 400;
   line-height: 20px;
   color: #000000;
-  padding: 12px;
-  height: 36px;
+  padding: 0.75rem;
+  height: 2.25rem;
   width: 100%;
   border: 1px solid #E1E1E1;
   border-radius: 4px;
@@ -828,12 +837,12 @@ a {
 }
 @media (min-width: 768px) {
   .form__name {
-    height: 48px;
+    height: 3rem;
   }
 }
 @media (min-width: 1280px) {
   .form__name {
-    height: 48px;
+    height: 3rem;
   }
 }
 .form__name:active {
@@ -871,7 +880,7 @@ a {
   vertical-align: top;
   resize: vertical;
   overflow: auto;
-  padding: 12px;
+  padding: 0.75rem;
   border: 1px solid #E1E1E1;
   box-sizing: border-box;
   border-radius: 4px;
@@ -879,12 +888,12 @@ a {
 }
 @media (min-width: 768px) {
   .form__comment {
-    padding: 16px;
+    padding: 1rem;
   }
 }
 @media (min-width: 768px) {
   .form__comment {
-    padding: 16px;
+    padding: 1rem;
   }
 }
 .form__comment:active {
@@ -919,7 +928,7 @@ a {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: 4px;
-  height: 40px;
+  height: 2.5rem;
   background-color: #323232;
   text-transform: uppercase;
   font-family: "Avenir";
@@ -949,12 +958,12 @@ a {
 }
 @media (min-width: 768px) {
   .comment {
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .comment {
-    padding: 36px 250px;
+    padding: 2.25rem 15.625rem;
   }
 }
 .comment__align {
@@ -963,12 +972,12 @@ a {
 }
 @media (min-width: 768px) {
   .comment__align {
-    padding: 16px;
+    padding: 1rem;
   }
 }
 @media (min-width: 1280px) {
   .comment__align {
-    padding: 16px;
+    padding: 1rem;
   }
 }
 .comment__avatar {
@@ -1047,5 +1056,5 @@ a {
 }
 .comment__border {
   color: #E1E1E1;
-  padding: 0 36px;
+  padding: 0 2.25rem;
 }/*# sourceMappingURL=bio.css.map */

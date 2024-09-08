@@ -487,25 +487,25 @@ a {
 .shows {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 20rem;
 }
 @media (min-width: 768px) {
   .shows {
     width: 100%;
-    padding: 0 36px;
-    padding-bottom: 36px;
+    padding: 0 2.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .shows {
     width: 100%;
-    padding-left: 144px;
+    padding-left: 9rem;
     flex-direction: row;
   }
 }
 @media (min-width: 1280px) {
   .shows__divmain {
-    padding-top: 42px;
+    padding-top: 2.625rem;
     width: 70%;
   }
 }
@@ -519,7 +519,7 @@ a {
 }
 @media (min-width: 768px) {
   .shows__title {
-    padding: 42px 0;
+    padding: 2.625rem 0;
     font-family: "Avenir";
     font-size: 40px;
     font-weight: 700;
@@ -554,15 +554,38 @@ a {
   }
 }
 .shows__content {
-  width: 320px;
-  padding-top: 16px;
+  width: 20rem;
+  padding-top: 1rem;
 }
 @media (min-width: 768px) {
   .shows__content {
     width: 100%;
     display: flex;
-    padding: 16px 0;
+    padding: 1.5rem 1.125rem;
     justify-content: space-between;
+  }
+  .shows__content:focus {
+    background-color: #E1E1E1;
+  }
+  .shows__content:hover {
+    background-color: #FAFAFA;
+  }
+  .shows__content:active {
+    background-color: #E1E1E1;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__content {
+    padding: 1.5rem 1.125rem;
+  }
+  .shows__content:focus {
+    background-color: #E1E1E1;
+  }
+  .shows__content:hover {
+    background-color: #FAFAFA;
+  }
+  .shows__content:active {
+    background-color: #E1E1E1;
   }
 }
 .shows__label-date, .shows__lable-location, .shows__lable-venue {
@@ -576,6 +599,7 @@ a {
 @media (min-width: 768px) {
   .shows__label-date, .shows__lable-location, .shows__lable-venue {
     padding: 0;
+    padding-left: 1rem;
     width: 12rem;
   }
 }
@@ -656,7 +680,7 @@ a {
 .shows__button {
   margin: 1rem;
   border-radius: 4px;
-  height: 40px;
+  height: 2.5rem;
   width: 90%;
   background-color: #323232;
   text-transform: uppercase;
@@ -678,7 +702,7 @@ a {
 @media (min-width: 1280px) {
   .shows__button {
     width: 22%;
-    margin: 1rem;
+    margin: 0;
   }
 }
 .shows__hrborder {

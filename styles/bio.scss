@@ -63,31 +63,31 @@ a{
       width:100%;
 
        @include tablet{
-       padding:48px 36px 36px 36px;
+       padding:3rem 2.25rem 2.25rem 2.25rem;
        @include font-style('Avenir',36px,700,44px,$bandsite-black);
       }
 
       @include desktop{
-       padding:48px 160px 36px 160px;
+       padding:3rem 10rem 2.25rem 10rem;
        @include font-style('Avenir',36px,700,44px,$bandsite-black);
       }
     }
 
     &__img{
-      padding:0 16px 16px 16px;
+      padding:0 1rem 1rem 1rem;
       width:100%;
       height:12rem;
 
      @include tablet{
         display: flex;
-        padding: 0 80px 36px 80px;
+        padding: 0 5rem 2.25rem 5rem;
         width:95%;
         height:25rem;
         margin:0 auto;
       }
       @include desktop{
         display: flex;
-        padding: 0 80px 36px 80px;
+        padding: 0 5rem 2.25rem 5rem;
         margin:0 auto;
         width:80%;
         height:36.25rem;
@@ -104,7 +104,7 @@ a{
       @include tablet{
         display: flex;
         margin:0 auto;
-        padding: 0 80px 0 80px;
+        padding: 0 5rem 0 5rem;
         @include font-style('Avenir',24px,600,32px,$bandsite-black);
         font-style: bold;
         width:95%;
@@ -117,6 +117,7 @@ a{
         width:55%;
       }
     }
+
     &__para--modified{
       @include tablet{
         @include font-style('Avenir',19px,600,22px,$bandsite-black);
@@ -124,8 +125,8 @@ a{
         margin:0 auto;
         padding: 1rem 5rem 2.25rem 5rem;
         width:95%;
-        
       }
+
       @include desktop{
         @include font-style('Avenir',19px,600,22px,$bandsite-black);
         display: flex;
@@ -135,18 +136,17 @@ a{
       }
     }
 }
+
 .beesarticle{
   &__title{
     @include font-style('Avenir',14px,600,22px,$bandsite-black);
     padding: 1rem;
     
-
     @include tablet{
       @include font-style('Avenir',24px,600,32px,$bandsite-black);
       padding: 0 2.25rem;
       width:84%;
       margin:0 auto; 
-     
     } 
     @include desktop{
       @include font-style('Avenir',24px,600,32px,$bandsite-black); 
@@ -189,6 +189,7 @@ a{
         text-align:left;
      }
     }
+
     &__para--modifier{
       @include tablet{
 
@@ -215,14 +216,13 @@ a{
       padding: 2rem 5rem 2.25rem 5rem;
       @include font-style('Avenir',36px,700,44px,$bandsite-black);
     }
-    
   }
+
   &__imgcontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-
 
     @include tablet{
       flex-direction: row;
@@ -230,6 +230,7 @@ a{
       padding: 0 2.25rem 0 2.25rem;
       height: 33.25rem;  
     }
+
     @include desktop{
       flex-direction: row;
       justify-content: space-between;
@@ -237,6 +238,7 @@ a{
       height: 50%;   
     }
   }
+
   &__img{
     width:100%;
     height:12rem;
@@ -267,15 +269,15 @@ a{
 }
 
 .conversation{
-  padding:16px;
+  padding:1rem;
 
   @include tablet{
-    padding:36px;    
+    padding:2.25rem;   
     padding-bottom:0;   
   }
 
   @include desktop{
-    padding:80px;   
+    padding:5rem;  
     padding-bottom:0;    
   }
 
@@ -286,9 +288,9 @@ a{
       @include font-style('Avenir',36px,600,44px,$bandsite-black);
     }
 
-    // @include desktop{
-    //   @include font-style('Avenir',36px,700,44px,$bandsite-black);
-    // }
+    @include desktop{
+      @include font-style('Avenir',36px,700,44px,$bandsite-black);
+    }
   } 
 }
 
@@ -296,15 +298,15 @@ a{
   display:flex;
   flex-direction:column;
   width:100%;
-  padding:16px 0;
+  padding:1rem 0;
 
   @include tablet{
-    padding:36px;
+    padding:2.25rem;
     padding-bottom: 0;
   }
 
   @include desktop{
-    padding:36px 250px 0 250px;
+    padding:2.25rem 15.625rem 0 15.625rem;
   }
 
   &__partition{
@@ -352,19 +354,19 @@ a{
   }
   &__name{
     @include font-style('Avenir',13px,400,20px,$bandsite-darkblack);
-    padding: 12px;
-    height:36px; //48 for t,d
+    padding: 0.75rem;
+    height:2.25rem;
     width:100%;
     border:1px solid $mercury;
     border-radius: 4px;
     background-color: $alabaster;
 
     @include tablet{
-      height:48px; 
+      height:3rem;
     }
 
     @include desktop{
-      height:48px; 
+      height:3rem;
     }
 
     &:active{
@@ -383,11 +385,11 @@ a{
   
   }
      
- 
   &__commentLable{
     @include font-style('Avenir',13px,600,20px,$silver);
     padding: 1.5rem 1rem 0.25rem 0;
   }
+
   &__comment{    
     @include font-style('Avenir',13px,400,20px,$bandsite-darkblack);
     height:100px;
@@ -395,17 +397,17 @@ a{
     vertical-align: top;
     resize: vertical;  
     overflow: auto;
-    padding: 12px;  
+    padding: 0.75rem;  
     border:1px solid $mercury;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: $alabaster;
 
     @include tablet{
-      padding: 16px;
+      padding: 1rem;
     }
     @include tablet{
-      padding: 16px;  
+      padding: 1rem; 
     }
 
     &:active{
@@ -416,7 +418,6 @@ a{
       outline: none;  
     }
     &::placeholder{      
-    //  display: block;  //check this..its not working.
       text-align: start; 
       color: $bandsite-darkblack;
       padding-top: 0;
@@ -433,7 +434,7 @@ a{
     margin-top:1rem;
     margin-bottom:1rem;
     border-radius: 4px;
-    height:40px;
+    height:2.5rem;
     background-color: $bandsite-black;
     text-transform: uppercase;
     @include font-style('Avenir',16px,600,20px,$white);
@@ -448,44 +449,37 @@ a{
       margin-bottom:2rem;
       align-self: self-end;
     }
-
-    // @include desktop{
-    //   margin-top:2rem;
-    //   margin-bottom:2rem;
-    // }
-
   }
+
   &__border{
     color:$mercury;
-    
    }
 }
 
 .comment{
   display:flex;
   flex-direction: column;
-  // padding:16px;
-  // width:320px;
 
   @include tablet{
-    padding:36px;
+    padding:2.25rem;
   }
 
   @include desktop{
-      padding:36px 250px;  
+      padding:2.25rem 15.625rem;
     }
+
   &__align{
     display: flex;
     flex-direction: row;
 
     @include tablet{
-      padding:16px;
+      padding:1rem;
     }
     @include desktop{
-      padding:16px;
+      padding:1rem;
     }
-   
   }
+
   &__avatar{
     display: flex;
     align-items: center;
@@ -517,30 +511,31 @@ a{
   &__main{
     display: flex;
     flex-direction: column;
-    // padding:16px 16px 16px 0;
     width:80%;
 
     @include tablet{
       width:92%
     }
   }
+
   &__head{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height:3rem;
-    
   }
+
   &__name{
     padding:0;
-    // color:$bandsite-darkblack;
     @include font-style('Avenir',16px,600,20px,$bandsite-darkblack);
   }
+
    &__date{
     justify-content: center;
     align-items: center;
     color:$mercury;
    }
+
    &__text{
     @include font-style('Avenir',16px,400,20px,$bandsite-darkblack);
     padding-bottom:1rem;
@@ -554,6 +549,6 @@ a{
 
    &__border{
     color:$mercury;
-    padding:0 36px;
+    padding:0 2.25rem;
    }
 }

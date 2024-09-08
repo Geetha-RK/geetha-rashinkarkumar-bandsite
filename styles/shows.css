@@ -382,6 +382,11 @@ a {
   background-size: cover;
   background-position: center;
 }
+@media (min-width: 768px) {
+  .hero {
+    height: 37rem;
+  }
+}
 .hero__overlay {
   position: absolute;
   background-color: #323232;
@@ -399,6 +404,16 @@ a {
   padding: 0 1rem 2rem 1rem;
   width: 84%;
 }
+@media (min-width: 768px) {
+  .hero__title {
+    font-family: "Avenir";
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 68px;
+    color: #FFFFFF;
+    padding: 0 2rem;
+  }
+}
 .hero__copy {
   z-index: 1;
   font-family: "Avenir";
@@ -408,14 +423,33 @@ a {
   color: #FFFFFF;
   padding: 2rem 1rem;
 }
+@media (min-width: 768px) {
+  .hero__copy {
+    font-family: "Avenir";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #FFFFFF;
+    padding: 5rem 2rem;
+    padding-bottom: 2rem;
+  }
+}
 .hero__iframe {
   z-index: 1;
   padding: 1rem;
+}
+@media (min-width: 768px) {
+  .hero__iframe {
+    padding-left: 2rem;
+    width: 60%;
+    height: 13rem;
+  }
 }
 
 .shows {
   display: flex;
   flex-direction: column;
+  width: 320px;
 }
 .shows__title {
   font-family: "Avenir";
@@ -424,6 +458,19 @@ a {
   line-height: 32px;
   color: #000000;
   padding: 1rem;
+}
+@media (min-width: 768px) {
+  .shows__title {
+    padding: 42px 36px;
+    font-family: "Avenir";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    color: #000000;
+  }
+}
+.shows__content {
+  width: 320px;
 }
 .shows__label-date, .shows__lable-location, .shows__lable-venue {
   font-family: "Avenir";
@@ -467,6 +514,7 @@ a {
   margin: 1rem;
   border-radius: 4px;
   height: 40px;
+  width: 100%;
   background-color: #323232;
   text-transform: uppercase;
   font-family: "Avenir";

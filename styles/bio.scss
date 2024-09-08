@@ -268,16 +268,44 @@ a{
 
 .conversation{
   padding:16px;
-  &__title{
-    @include font-style('Avenir',24px,700,32px,$bandsite-black);
+
+  @include tablet{
+    padding:36px;    
+    padding-bottom:0;   
   }
+
+  @include desktop{
+    padding:80px;   
+    padding-bottom:0;    
+  }
+
+  &__title{
+    @include font-style('Avenir',24px,600,32px,$bandsite-black);
+
+    @include tablet{
+      @include font-style('Avenir',36px,600,44px,$bandsite-black);
+    }
+
+    // @include desktop{
+    //   @include font-style('Avenir',36px,700,44px,$bandsite-black);
+    // }
+  } 
 }
 
 .form{
   display:flex;
   flex-direction:column;
-  width:320px;
-  padding:16px;
+  width:100%;
+  padding:16px 0;
+
+  @include tablet{
+    padding:36px;
+    padding-bottom: 0;
+  }
+
+  @include desktop{
+    padding:36px 250px 0 250px;
+  }
 
   &__partition{
     display: flex;
@@ -289,10 +317,20 @@ a{
     align-items: center;
     justify-content: center;
     height:2.5rem;
-    width:20%;
+    width:15%;
     border-radius: 50%; 
     margin:0.5rem;
+    margin-top: 2rem;
     background-color: #E1E1E1;
+
+    @include tablet{
+      height:4rem;
+      width:10%;
+    }
+    @include desktop{
+      height:4rem;
+      width:10%;
+    }
   }
 
   &__img{
@@ -305,12 +343,122 @@ a{
   &__table{
     display: flex;
     flex-direction: column;
+    width:100%;
   }
 
-  // &__namelable{
+  &__namelable{
+    @include font-style('Avenir',13px,600,20px,$silver);
+    padding: 1rem 1rem 0.25rem 0;
+  }
+  &__name{
+    @include font-style('Avenir',13px,400,20px,$bandsite-darkblack);
+    padding: 12px;
+    height:36px; //48 for t,d
+    width:100%;
+    border:1px solid $mercury;
+    border-radius: 4px;
+    background-color: $alabaster;
 
-  // }
+    @include tablet{
+      height:48px; 
+    }
 
+    @include desktop{
+      height:48px; 
+    }
+
+    &:active{
+      border:1px solid $bandsite-black;
+    }
+    &::placeholder{
+      color:$bandsite-darkblack;
+    }
+    &:focus {
+      border: 1px solid $bandsite-black;  
+      outline: none;  
+    }
+    &.error {
+      border-color: $error;
+    }
+  
+  }
+     
+ 
+  &__commentLable{
+    @include font-style('Avenir',13px,600,20px,$silver);
+    padding: 1.5rem 1rem 0.25rem 0;
+  }
+  &__comment{    
+    @include font-style('Avenir',13px,400,20px,$bandsite-darkblack);
+    height:100px;
+    width: 100%; 
+    vertical-align: top;
+    resize: vertical;  
+    overflow: auto;
+    padding: 12px;  
+    border:1px solid $mercury;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: $alabaster;
+
+    @include tablet{
+      padding: 16px;
+    }
+    @include tablet{
+      padding: 16px;  
+    }
+
+    &:active{
+      border:1px solid $bandsite-black;
+    }
+    &:focus {
+      border: 1px solid $bandsite-black;  
+      outline: none;  
+    }
+    &::placeholder{      
+    //  display: block;  //check this..its not working.
+      text-align: start; 
+      color: $bandsite-darkblack;
+      padding-top: 0;
+      line-height: 1.4; 
+    }
+    &:not(:placeholder-shown) {
+      border:1px solid $mercury;
+    }
+    &.error {
+      border-color: $error;
+    }
+  }
+  &__button{
+    margin-top:1rem;
+    margin-bottom:1rem;
+    border-radius: 4px;
+    height:40px;
+    background-color: $bandsite-black;
+    text-transform: uppercase;
+    @include font-style('Avenir',16px,600,20px,$white);
+
+    &:hover{
+      background-color: $bandsite-darkblack;
+    }
+
+    @include tablet{
+      width:200px;
+      margin-top:2rem;
+      margin-bottom:2rem;
+      align-self: self-end;
+    }
+
+    // @include desktop{
+    //   margin-top:2rem;
+    //   margin-bottom:2rem;
+    // }
+
+  }
+  &__border{
+    color:$mercury;
+    
+   }
 }
 
 .comment{
@@ -319,19 +467,44 @@ a{
   // padding:16px;
   // width:320px;
 
+  @include tablet{
+    padding:36px;
+  }
+
+  @include desktop{
+      padding:36px 250px;  
+    }
   &__align{
     display: flex;
     flex-direction: row;
+
+    @include tablet{
+      padding:16px;
+    }
+    @include desktop{
+      padding:16px;
+    }
+   
   }
   &__avatar{
     display: flex;
     align-items: center;
     justify-content: center;
     height:2.5rem;
-    width:20%;
-    border-radius: 50%; 
-    margin:0.5rem;
+    width:15%;
+    border-radius: 50%;
+    margin:0.5rem; 
+    margin-top:1rem;
     background-color: #E1E1E1;
+
+    @include tablet{
+      height:4rem;
+      width:10%
+    }
+    @include desktop{
+      height:4rem;
+      width:10%
+    }
   }
 
   &__img{
@@ -344,19 +517,43 @@ a{
   &__main{
     display: flex;
     flex-direction: column;
-    padding:16px 16px 16px 0;
+    // padding:16px 16px 16px 0;
     width:80%;
+
+    @include tablet{
+      width:92%
+    }
   }
   &__head{
     display: flex;
-    
     justify-content: space-between;
+    align-items: center;
+    height:3rem;
     
   }
   &__name{
-    padding:0.5rem;
+    padding:0;
+    // color:$bandsite-darkblack;
+    @include font-style('Avenir',16px,600,20px,$bandsite-darkblack);
   }
-  //  &__date{
-  //   align-self: flex-end;
-  //  }
+   &__date{
+    justify-content: center;
+    align-items: center;
+    color:$mercury;
+   }
+   &__text{
+    @include font-style('Avenir',16px,400,20px,$bandsite-darkblack);
+    padding-bottom:1rem;
+    width:100%;
+    text-align: justify;
+
+    @include desktop{
+      text-align: left;
+    }
+   }
+
+   &__border{
+    color:$mercury;
+    padding:0 36px;
+   }
 }

@@ -1,24 +1,32 @@
 @font-face {
-  font-family: "Avenir", sans-serif;
+  font-family: "Avenir";
   src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype"), url(../assets/fonts/AvenirNextLTPro.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Avenir", sans-serif;
+  font-family: "Avenir";
   src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype"), url(../assets/fonts/AvenirNextLTProDemi.ttf) format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Avenir", sans-serif;
+  font-family: "Avenir";
   src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype"), url(../assets/fonts/AvenirNextLTProBold.ttf) format("truetype");
   font-weight: 700;
   font-style: bold;
   font-display: swap;
 }
+* {
+  font-family: "Avenir", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 .header {
   font-family: "Avenir";
   font-size: 1rem;
@@ -32,7 +40,7 @@
   align-items: center;
   height: 6rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .header {
     flex-direction: row;
     justify-content: flex-start;
@@ -52,7 +60,7 @@
   display: flex;
   justify-content: flex-start;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .header__nav {
     height: 95%;
   }
@@ -95,7 +103,7 @@
   font-weight: 700;
   border-bottom: 4px solid #FFFFFF;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .header__item {
     height: 5.5rem;
     align-content: center;
@@ -140,7 +148,7 @@
   line-height: 32px;
   color: #FFFFFF;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__title {
     font-family: "Avenir";
     font-size: 36px;
@@ -166,7 +174,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__imgcontainer {
     align-items: center;
     width: 45%;
@@ -187,7 +195,7 @@
   color: #FFFFFF;
   padding: 1rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__parabold, .footer__para--contact, .footer__para--email {
     font-family: "Avenir";
     font-size: 14px;
@@ -212,7 +220,7 @@
   font-weight: 400;
   padding: 0 1rem 0 1rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__para--contact, .footer__para--email {
     padding: 0 2.25rem 0 0;
   }
@@ -225,7 +233,7 @@
 .footer__para--email {
   padding: 1rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__para--email {
     padding: 2.25rem 2.25rem 2.25rem 0;
   }
@@ -243,7 +251,7 @@
   padding: 1rem;
   width: 7.5rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__logo {
     width: 0;
     height: 0;
@@ -262,7 +270,7 @@
 .footer__logo1 {
   visibility: hidden;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__logo1 {
     visibility: visible;
     width: 7.5rem;
@@ -288,7 +296,7 @@
   color: #FFFFFF;
   padding: 1rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__copyright {
     font-family: "Avenir";
     font-size: 14px;
@@ -308,7 +316,7 @@
     padding: 0 10rem 5rem 10rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__card1 {
     display: flex;
     padding: 2.5rem 2.25rem 2.25rem 2.25rem;
@@ -324,7 +332,7 @@
     padding: 2.5rem 10rem 1.25rem 10rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__cardcontainer {
     display: flex;
     flex-direction: row;
@@ -341,7 +349,7 @@
     gap: 4rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .footer__card2 {
     display: flex;
     flex-direction: column;
@@ -375,7 +383,7 @@ a {
   background-size: cover;
   background-position: center;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .hero {
     height: 32rem;
   }
@@ -401,7 +409,7 @@ a {
   color: #FFFFFF;
   padding: 1rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .hero__title {
     font-family: "Avenir";
     font-size: 60px;
@@ -431,7 +439,7 @@ a {
   color: #323232;
   width: 100%;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .about__title {
     padding: 48px 36px 36px 36px;
     font-family: "Avenir";
@@ -456,7 +464,7 @@ a {
   width: 100%;
   height: 12rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .about__img {
     display: flex;
     padding: 0 80px 36px 80px;
@@ -486,7 +494,7 @@ a {
   font-style: bold;
   display: flex;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .about__para {
     display: flex;
     margin: 0 auto;
@@ -513,7 +521,7 @@ a {
     width: 55%;
   }
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .about__para--modified {
     font-family: "Avenir";
     font-size: 19px;
@@ -548,7 +556,7 @@ a {
   color: #323232;
   padding: 1rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .beesarticle__title {
     font-family: "Avenir";
     font-size: 24px;
@@ -576,7 +584,7 @@ a {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .beesarticle__paracontainer {
     flex-direction: row;
     padding: 2.25rem 6.3125rem 0.75rem 6.3125rem;
@@ -598,7 +606,7 @@ a {
   color: #323232;
   padding: 0 1rem 1rem 1rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .beesarticle__para {
     font-family: "Avenir";
     font-size: 14px;
@@ -638,7 +646,7 @@ a {
   color: #323232;
   padding: 0.5rem 1rem 1rem 1rem;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .gallery__title {
     font-family: "Avenir";
     font-size: 36px;
@@ -664,7 +672,7 @@ a {
   justify-content: center;
   flex-wrap: wrap;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .gallery__imgcontainer {
     flex-direction: row;
     justify-content: space-between;
@@ -692,7 +700,7 @@ a {
 .gallery__img:hover {
   filter: grayscale(0%);
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .gallery__img {
     width: 32%;
     height: 10rem;
@@ -712,19 +720,51 @@ a {
 .conversation {
   padding: 16px;
 }
+@media (min-width: 768px) {
+  .conversation {
+    padding: 36px;
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation {
+    padding: 80px;
+    padding-bottom: 0;
+  }
+}
 .conversation__title {
   font-family: "Avenir";
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 32px;
   color: #323232;
+}
+@media (min-width: 768px) {
+  .conversation__title {
+    font-family: "Avenir";
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    color: #323232;
+  }
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  padding: 16px;
+  width: 100%;
+  padding: 16px 0;
+}
+@media (min-width: 768px) {
+  .form {
+    padding: 36px;
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .form {
+    padding: 36px 250px 0 250px;
+  }
 }
 .form__partition {
   display: flex;
@@ -735,10 +775,23 @@ a {
   align-items: center;
   justify-content: center;
   height: 2.5rem;
-  width: 20%;
+  width: 15%;
   border-radius: 50%;
   margin: 0.5rem;
+  margin-top: 2rem;
   background-color: #E1E1E1;
+}
+@media (min-width: 768px) {
+  .form__avatar {
+    height: 4rem;
+    width: 10%;
+  }
+}
+@media (min-width: 1280px) {
+  .form__avatar {
+    height: 4rem;
+    width: 10%;
+  }
 }
 .form__img {
   height: 100%;
@@ -750,25 +803,196 @@ a {
 .form__table {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+.form__namelable {
+  font-family: "Avenir";
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #AFAFAF;
+  padding: 1rem 1rem 0.25rem 0;
+}
+.form__name {
+  font-family: "Avenir";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  padding: 12px;
+  height: 36px;
+  width: 100%;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+}
+@media (min-width: 768px) {
+  .form__name {
+    height: 48px;
+  }
+}
+@media (min-width: 1280px) {
+  .form__name {
+    height: 48px;
+  }
+}
+.form__name:active {
+  border: 1px solid #323232;
+}
+.form__name::-moz-placeholder {
+  color: #000000;
+}
+.form__name::placeholder {
+  color: #000000;
+}
+.form__name:focus {
+  border: 1px solid #323232;
+  outline: none;
+}
+.form__name.error {
+  border-color: #D22D2D;
+}
+.form__commentLable {
+  font-family: "Avenir";
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #AFAFAF;
+  padding: 1.5rem 1rem 0.25rem 0;
+}
+.form__comment {
+  font-family: "Avenir";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  height: 100px;
+  width: 100%;
+  vertical-align: top;
+  resize: vertical;
+  overflow: auto;
+  padding: 12px;
+  border: 1px solid #E1E1E1;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+}
+@media (min-width: 768px) {
+  .form__comment {
+    padding: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .form__comment {
+    padding: 16px;
+  }
+}
+.form__comment:active {
+  border: 1px solid #323232;
+}
+.form__comment:focus {
+  border: 1px solid #323232;
+  outline: none;
+}
+.form__comment::-moz-placeholder {
+  text-align: start;
+  color: #000000;
+  padding-top: 0;
+  line-height: 1.4;
+}
+.form__comment::placeholder {
+  text-align: start;
+  color: #000000;
+  padding-top: 0;
+  line-height: 1.4;
+}
+.form__comment:not(:-moz-placeholder-shown) {
+  border: 1px solid #E1E1E1;
+}
+.form__comment:not(:placeholder-shown) {
+  border: 1px solid #E1E1E1;
+}
+.form__comment.error {
+  border-color: #D22D2D;
+}
+.form__button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  height: 40px;
+  background-color: #323232;
+  text-transform: uppercase;
+  font-family: "Avenir";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.form__button:hover {
+  background-color: #000000;
+}
+@media (min-width: 768px) {
+  .form__button {
+    width: 200px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    align-self: self-end;
+  }
+}
+.form__border {
+  color: #E1E1E1;
 }
 
 .comment {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .comment {
+    padding: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .comment {
+    padding: 36px 250px;
+  }
+}
 .comment__align {
   display: flex;
   flex-direction: row;
+}
+@media (min-width: 768px) {
+  .comment__align {
+    padding: 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .comment__align {
+    padding: 16px;
+  }
 }
 .comment__avatar {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 2.5rem;
-  width: 20%;
+  width: 15%;
   border-radius: 50%;
   margin: 0.5rem;
+  margin-top: 1rem;
   background-color: #E1E1E1;
+}
+@media (min-width: 768px) {
+  .comment__avatar {
+    height: 4rem;
+    width: 10%;
+  }
+}
+@media (min-width: 1280px) {
+  .comment__avatar {
+    height: 4rem;
+    width: 10%;
+  }
 }
 .comment__img {
   height: 100%;
@@ -780,13 +1004,48 @@ a {
 .comment__main {
   display: flex;
   flex-direction: column;
-  padding: 16px 16px 16px 0;
   width: 80%;
+}
+@media (min-width: 768px) {
+  .comment__main {
+    width: 92%;
+  }
 }
 .comment__head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 3rem;
 }
 .comment__name {
-  padding: 0.5rem;
+  padding: 0;
+  font-family: "Avenir";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #000000;
+}
+.comment__date {
+  justify-content: center;
+  align-items: center;
+  color: #E1E1E1;
+}
+.comment__text {
+  font-family: "Avenir";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  padding-bottom: 1rem;
+  width: 100%;
+  text-align: justify;
+}
+@media (min-width: 1280px) {
+  .comment__text {
+    text-align: left;
+  }
+}
+.comment__border {
+  color: #E1E1E1;
+  padding: 0 36px;
 }/*# sourceMappingURL=bio.css.map */

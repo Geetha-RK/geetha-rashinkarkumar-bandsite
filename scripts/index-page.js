@@ -54,12 +54,13 @@ const reviews=[
     partition.appendChild(formTable);
 
     const nameLable=document.createElement("lable");
-    nameLable.classList.add('.form__namelable');
+    nameLable.classList.add('form__namelable');
     nameLable.setAttribute("for","form__name-id");
     nameLable.textContent="NAME";
     formTable.appendChild(nameLable);
 
     const cName=document.createElement("input");
+    cName.classList.add("form__name")
     cName.type="text";
     cName.id="form__name-id";
     cName.name="reviewerName";
@@ -73,6 +74,7 @@ const reviews=[
     formTable.appendChild(commentLable);
 
     const comment=document.createElement("input");
+    comment.classList.add("form__comment")
     comment.type="textarea";
     comment.id="form__comment-id";
     comment.name="formComment";
@@ -85,6 +87,9 @@ const reviews=[
     button.textContent="COMMENT";
     formTable.appendChild(button);
 
+    const hrborder = document.createElement("hr");
+    hrborder.classList.add("form__border");
+    formEl.appendChild(hrborder);
 
     const commentSection = document.querySelector(".comment-section");
     // console.log(commentSection);
@@ -147,9 +152,7 @@ const reviews=[
         console.log(review.date);
         console.log(review.comment);
 
-        const hrborder = document.createElement("hr");
-        hrborder.classList.add("commment__border");
-        displayEl.appendChild(hrborder);
+        
 
         const align = document.createElement("div");
         align.classList.add("comment__align");
@@ -195,4 +198,9 @@ const reviews=[
         commentText.classList.add("comment__text");
         commentText.innerText = review.comment;
         main.appendChild(commentText);
+
+        const hrborder = document.createElement("hr");
+        hrborder.classList.add("commment__border");
+        displayEl.appendChild(hrborder);
+
     }

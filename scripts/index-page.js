@@ -69,9 +69,11 @@ const reviews=[
     commentLable.textContent="COMMENT";
     formTable.appendChild(commentLable);
 
-    const comment=document.createElement("input");
+  
+
+     const comment=document.createElement("textarea");
     comment.classList.add("form__comment")
-    comment.type="textarea";
+    comment.type="text";
     comment.id="form__comment-id";
     comment.name="formComment";
     comment.placeholder="Add a new comment";

@@ -123,22 +123,26 @@ let reviews = [];
         const comment=form.formComment.value;
 
         
-
         window.newArray={
             name:name,
-            comment:comment,
-            date:formatDateToMMDDYYYY(date),
-            picture:"./assets/images/Mohan-muruge.jpg",
+            comment:comment
         };
-        
-        
-        reviews.push(newArray);
-        console.table(reviews);        //----------------------->
+
+        // console.table(newArray);
+        async function postreviews() {   
+            console.log('Sending array:',window.newArray)
+            try{
+                const postResponse = await bandSiteApi.postComment(window.newArray);
+                console.log('Comment posted:', postResponse);
+            }catch(error){
+                console.error('Error posting comment:', error);
+            }
+        }
+        postreviews();
         form.reset();
 
         display();  
     });
-    console.table(reviews);    //------------------>
     const displayEl = document.querySelector(".comment");
 
     // function formatDateToMMDDYYYY(date) {
@@ -170,7 +174,7 @@ let reviews = [];
                 try{
                     reviews = await bandSiteApi.getComments();
                     console.log('Comments here:', reviews);
-                    console.table(reviews); //--------------------->
+                    // console.table(reviews); //--------------------->
                     // const sortedReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date));
                         const sortedReviews = reviews.sort((a, b) => b.timestamp - a.timestamp);
                     // sortedReviews.slice(0, 3).forEach((review) => {  

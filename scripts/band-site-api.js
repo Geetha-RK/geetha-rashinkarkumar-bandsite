@@ -6,8 +6,8 @@ class BandSiteApi {
 
     async getComments(){
         try{
-            console.log(this.apiKey);
-            console.log(this.baseURL);
+            // console.log(this.apiKey);
+            // console.log(this.baseURL);
             const response = await axios.get(`${this.baseURL}/comments?api_key=${this.apiKey}`);
             return response.data;
             
@@ -28,13 +28,15 @@ class BandSiteApi {
     };
 
     async postComment(newObject){
+        
         if (!newObject.name || !newObject.comment) {
             throw new Error("Both 'name' and 'comment' are required.");
           }
         try{
+            // console.log('passing object:',newObject)
             const response = await axios.post(`${this.baseURL}/comments?api_key=${this.apiKey}`,newObject);
-            // console.log("hoho");
-            // console.log(response.data);
+           
+            console.log(response.data);
             return response.data;
             
         }catch(error){
@@ -72,25 +74,25 @@ class BandSiteApi {
 //         console.error('Error posting comment:', error);
 //     });
 
-// async function main() {
+async function main() {
     
-//     const apiKey = "aedc5d1c-c5a5-46ea-acbc-70154d20e5ef";
+    const apiKey = "aedc5d1c-c5a5-46ea-acbc-70154d20e5ef";
         
-//     const bandSiteApi = new BandSiteApi(apiKey);
+    const bandSiteApi = new BandSiteApi(apiKey);
 
 //     try {       
 //         // const comments = await bandSiteApi.getComments();
 //         // console.log('Comments:', comments);
         
-//         // const newComment = { name: 'John Doe', comment: 'Great show!' };
-//         const postResponse = await bandSiteApi.postComment(newComment);
-//         console.log('Comment posted:', postResponse);
+        // const newComment = { name: 'John Doe', comment: 'Great show!' };
+        // const postResponse = await bandSiteApi.postComment(newComment);
+        // console.log('Comment posted:', postResponse);
 //         const showsResponse= await bandSiteApi.getShows();
 //         console.log('Shows:', showsResponse);
 //     } catch (error) {
 //         console.error('An error occurred:', error);
 //     }
-// }
+}
 
 // main();
 

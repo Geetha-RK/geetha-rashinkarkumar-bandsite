@@ -82,39 +82,32 @@ let reviews = [];
 
         const name=form.reviewerName.value;
         const comment=form.formComment.value;
-
         
         window.newArray={
             name:name,
             comment:comment
         };
 
-        // console.table(newArray);
         async function postreviews() {   
             console.log('Sending array:',window.newArray)
             try{
                 const postResponse = await bandSiteApi.postComment(window.newArray);
                 console.log('Comment posted:', postResponse);
+                display();
             }catch(error){
                 console.error('Error posting comment:', error);
             }
+
         }
         postreviews();
         form.reset();
 
         display();  
     });
+
     const displayEl = document.querySelector(".comment");
 
-    // function formatDateToMMDDYYYY(date) {
-    //     const month = String(date.getMonth() + 1).padStart(2, '0'); 
-    //     const day = String(date.getDate()).padStart(2, '0');
-    //     const year = date.getFullYear();
-        
-    //     return `${month}/${day}/${year}`;
-    // }
-    function formatDateToMMDDYYYY(input) {
-       
+    function formatDateToMMDDYYYY(input) {       
         const date = (input instanceof Date) ? input : new Date(input);
     
         if (isNaN(date.getTime())) {
@@ -135,8 +128,6 @@ let reviews = [];
                 try{
                     reviews = await bandSiteApi.getComments();
                     console.log('Comments here:', reviews);
-                    // console.table(reviews); //--------------------->
-                    // const sortedReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date));
                         const sortedReviews = reviews.sort((a, b) => b.timestamp - a.timestamp);
                     // sortedReviews.slice(0, 3).forEach((review) => {  
                         sortedReviews.forEach((review) => {   
@@ -202,5 +193,4 @@ let reviews = [];
         const hrborder = document.createElement("hr");
         hrborder.classList.add("commment__border");
         displayEl.appendChild(hrborder);
-
     }

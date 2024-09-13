@@ -1,35 +1,4 @@
-// const shows=[
-//     {
-//         date:'Mon Sept 09 2024',
-//         venue:'Ronald Lane',
-//         location:'San Francisco, CA'
-//     },
-//     {
-//         date:'Tue Sept 17 2024',
-//         venue:'Pier 3 East',
-//         location:'San Francisco, CA'
-//     },
-//     {
-//         date:'Sat Oct 12 2024',
-//         venue:'View Lounge ',
-//         location:'San Francisco, CA'
-//     },
-//     {
-//         date:'Sat Nov 16 2024',
-//         venue:'Hyatt Agency ',
-//         location:'San Francisco, CA'   
-//     },
-//     {
-//         date:'Fri Nov 29 2024',
-//         venue:'Moscow Center',
-//         location:'San Francisco, CA'
-//     },
-//     {
-//         date:'Wed Dec 18 2024',
-//         venue:'Press Club ',
-//         location:'San Francisco, CA'
-//     }
-// ];
+
 let shows=[];
 const apiKey = "aedc5d1c-c5a5-46ea-acbc-70154d20e5ef";
 const bandSiteApi = new BandSiteApi(apiKey); 
@@ -39,6 +8,7 @@ async function getShowsData(){
         const showsResponse = await bandSiteApi.getShows();
         console.log('showsPromise:',showsResponse);
         adjustWindowSize(showsResponse);
+        window.addEventListener('resize', ()=>{adjustWindowSize(showsResponse)});
     }catch(error){
         console.log('Error in shows get function',error);
     }
@@ -49,18 +19,14 @@ function adjustWindowSize(shows) {
     showsEl.innerHTML = ""; 
 
     function convertTimestampToDateString(timestamp) {
-        // Create a new Date object using the timestamp
         const date = new Date(timestamp);
-    
-        // Options for formatting the date
+
         const options = {
-            weekday: 'short', // "Mon"
-            year: 'numeric',  // "2024"
-            month: 'short',    // "Sep"
-            day: 'numeric'    // "9"
+            weekday: 'short', 
+            year: 'numeric',  
+            month: 'short',    
+            day: 'numeric'    
         };
-    
-        // Format the date to a readable string
         return date.toLocaleDateString('en-US', options);
     }
 
@@ -125,9 +91,7 @@ function adjustWindowSize(shows) {
             
             divMain.appendChild(div2);
             divMain.appendChild(hrborder);
-        });
-
-        
+        });        
     } else if (window.innerWidth >= 768) {
         console.log("Tablet View");
         const div1 = document.createElement("div");
@@ -181,7 +145,6 @@ function adjustWindowSize(shows) {
             showsEl.appendChild(div2);
             showsEl.appendChild(hrborder);
         });
-
     } else {
         console.log("Mobile View");
         shows.forEach(show => {
@@ -222,7 +185,6 @@ function adjustWindowSize(shows) {
             const hrborder = document.createElement("hr");
             hrborder.classList.add("shows__hrborder");
 
-
             div.appendChild(lableDate);
             div.appendChild(showsDate);
             div.appendChild(venue);
@@ -233,20 +195,9 @@ function adjustWindowSize(shows) {
             showsEl.appendChild(div);
             showsEl.appendChild(hrborder);
 
-            // showsEl.appendChild(lableDate);
-            // showsEl.appendChild(showsDate);
-            // showsEl.appendChild(venue);
-            // showsEl.appendChild(showsVenue);
-            // showsEl.appendChild(location);
-            // showsEl.appendChild(showsLocation);
-            // showsEl.appendChild(buyButton);
-            // showsEl.appendChild(hrborder);
         });
     }
 }
 
 
-// adjustWindowSize();
 
-
-window.addEventListener('resize', ()=>{adjustWindowSize(shows)});

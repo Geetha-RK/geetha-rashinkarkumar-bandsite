@@ -5,43 +5,6 @@ const apiKey = "aedc5d1c-c5a5-46ea-acbc-70154d20e5ef";
 const bandSiteApi = new BandSiteApi(apiKey); 
 let reviews = [];
 
-// let reviews = [];
-// async function getreviews() {  
-//     const apiKey = "aedc5d1c-c5a5-46ea-acbc-70154d20e5ef";
-//     const bandSiteApi = new BandSiteApi(apiKey);
-//     try{
-//         reviews = await bandSiteApi.getComments();
-//         console.log('Comments here:', reviews);
-//     }catch (error) {
-//         console.error('An error occurred in reviews comments:', error);
-//     }
-// }
-
-
-
-
-
-// const reviews=[
-//     {
-//         name:'Victor Pinto',
-//         comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
-//         date: '11/02/2023',
-//         picture:null,
-//     },
-//     {
-//         name:'Christina Cabrera',
-//         comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
-//         date: '10/28/2023',
-//         picture:null,
-//     },
-//     {
-//         name:'Isaac Tadesse',
-//         comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-//         date: '10/20/2023',
-//         picture:"./assets/images/Mohan-muruge.jpg",
-//     }
-// ];
-
     const partition = document.createElement("div");
     partition.classList.add("form__partition");
     formEl.appendChild(partition);
@@ -89,9 +52,7 @@ let reviews = [];
     commentLable.textContent="COMMENT";
     formTable.appendChild(commentLable);
 
-  
-
-     const comment=document.createElement("textarea");
+    const comment=document.createElement("textarea");
     comment.classList.add("form__comment")
     comment.type="text";
     comment.id="form__comment-id";

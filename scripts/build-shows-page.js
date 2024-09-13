@@ -1,39 +1,68 @@
-const shows=[
-    {
-        date:'Mon Sept 09 2024',
-        venue:'Ronald Lane',
-        location:'San Francisco, CA'
-    },
-    {
-        date:'Tue Sept 17 2024',
-        venue:'Pier 3 East',
-        location:'San Francisco, CA'
-    },
-    {
-        date:'Sat Oct 12 2024',
-        venue:'View Lounge ',
-        location:'San Francisco, CA'
-    },
-    {
-        date:'Sat Nov 16 2024',
-        venue:'Hyatt Agency ',
-        location:'San Francisco, CA'   
-    },
-    {
-        date:'Fri Nov 29 2024',
-        venue:'Moscow Center',
-        location:'San Francisco, CA'
-    },
-    {
-        date:'Wed Dec 18 2024',
-        venue:'Press Club ',
-        location:'San Francisco, CA'
-    }
-];
+// const shows=[
+//     {
+//         date:'Mon Sept 09 2024',
+//         venue:'Ronald Lane',
+//         location:'San Francisco, CA'
+//     },
+//     {
+//         date:'Tue Sept 17 2024',
+//         venue:'Pier 3 East',
+//         location:'San Francisco, CA'
+//     },
+//     {
+//         date:'Sat Oct 12 2024',
+//         venue:'View Lounge ',
+//         location:'San Francisco, CA'
+//     },
+//     {
+//         date:'Sat Nov 16 2024',
+//         venue:'Hyatt Agency ',
+//         location:'San Francisco, CA'   
+//     },
+//     {
+//         date:'Fri Nov 29 2024',
+//         venue:'Moscow Center',
+//         location:'San Francisco, CA'
+//     },
+//     {
+//         date:'Wed Dec 18 2024',
+//         venue:'Press Club ',
+//         location:'San Francisco, CA'
+//     }
+// ];
+let shows=[];
+const apiKey = "aedc5d1c-c5a5-46ea-acbc-70154d20e5ef";
+const bandSiteApi = new BandSiteApi(apiKey); 
 
-function adjustWindowSize() {
+async function getShowsData(){
+    try{
+        const showsResponse = await bandSiteApi.getShows();
+        console.log('showsPromise:',showsResponse);
+        adjustWindowSize(showsResponse);
+    }catch(error){
+        console.log('Error in shows get function',error);
+    }
+}
+getShowsData();
+function adjustWindowSize(shows) {
     const showsEl = document.querySelector('.shows');
     showsEl.innerHTML = ""; 
+
+    function convertTimestampToDateString(timestamp) {
+        // Create a new Date object using the timestamp
+        const date = new Date(timestamp);
+    
+        // Options for formatting the date
+        const options = {
+            weekday: 'short', // "Mon"
+            year: 'numeric',  // "2024"
+            month: 'short',    // "Sep"
+            day: 'numeric'    // "9"
+        };
+    
+        // Format the date to a readable string
+        return date.toLocaleDateString('en-US', options);
+    }
 
     const showsTitle = document.createElement("div");
     showsTitle.classList.add("shows__title");
@@ -72,11 +101,11 @@ function adjustWindowSize() {
 
             const showsDate = document.createElement("p");
             showsDate.classList.add("shows__date");
-            showsDate.innerText = show.date;
+            showsDate.innerText = convertTimestampToDateString(show.date);
 
             const showsVenue = document.createElement("p");
             showsVenue.classList.add("shows__venue");
-            showsVenue.innerText = show.venue;
+            showsVenue.innerText = show.place;
 
             const showsLocation = document.createElement("p");
             showsLocation.classList.add("shows__location");
@@ -127,11 +156,11 @@ function adjustWindowSize() {
 
             const showsDate = document.createElement("p");
             showsDate.classList.add("shows__date");
-            showsDate.innerText = show.date;
+            showsDate.innerText = convertTimestampToDateString(show.date);
 
             const showsVenue = document.createElement("p");
             showsVenue.classList.add("shows__venue");
-            showsVenue.innerText = show.venue;
+            showsVenue.innerText = show.place;
 
             const showsLocation = document.createElement("p");
             showsLocation.classList.add("shows__location");
@@ -176,11 +205,11 @@ function adjustWindowSize() {
 
             const showsDate = document.createElement("p");
             showsDate.classList.add("shows__date");
-            showsDate.innerText = show.date;
+            showsDate.innerText = convertTimestampToDateString(show.date);
 
             const showsVenue = document.createElement("p");
             showsVenue.classList.add("shows__venue");
-            showsVenue.innerText = show.venue;
+            showsVenue.innerText = show.place;
 
             const showsLocation = document.createElement("p");
             showsLocation.classList.add("shows__location");
@@ -217,7 +246,7 @@ function adjustWindowSize() {
 }
 
 
-adjustWindowSize();
+// adjustWindowSize();
 
 
-window.addEventListener('resize', adjustWindowSize);
+window.addEventListener('resize', ()=>{adjustWindowSize(shows)});

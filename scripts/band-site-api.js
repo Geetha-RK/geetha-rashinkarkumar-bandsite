@@ -19,8 +19,8 @@ class BandSiteApi {
     async getShows(){
         try{
             const response = await axios.get(`${this.baseURL}/showdates?api_key=${this.apiKey}`);
-            // console.log("im here");
-            // console.log(response.data);
+            console.log("im here");
+            console.log(response.data);
             return response.data;
         }catch(error){
             console.log(`GET shows request failed: ${error}`);
@@ -33,9 +33,7 @@ class BandSiteApi {
             throw new Error("Both 'name' and 'comment' are required.");
           }
         try{
-            // console.log('passing object:',newObject)
             const response = await axios.post(`${this.baseURL}/comments?api_key=${this.apiKey}`,newObject);
-           
             console.log(response.data);
             return response.data;
             
@@ -74,11 +72,11 @@ class BandSiteApi {
 //         console.error('Error posting comment:', error);
 //     });
 
-async function main() {
+// async function main() {
     
-    const apiKey = "aedc5d1c-c5a5-46ea-acbc-70154d20e5ef";
+//     const apiKey = "aedc5d1c-c5a5-46ea-acbc-70154d20e5ef";
         
-    const bandSiteApi = new BandSiteApi(apiKey);
+//     const bandSiteApi = new BandSiteApi(apiKey);
 
 //     try {       
 //         // const comments = await bandSiteApi.getComments();
@@ -92,7 +90,7 @@ async function main() {
 //     } catch (error) {
 //         console.error('An error occurred:', error);
 //     }
-}
+//}
 
 // main();
 

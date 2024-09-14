@@ -487,7 +487,6 @@ a {
 .shows {
   display: flex;
   flex-direction: column;
-  width: 20rem;
 }
 @media (min-width: 768px) {
   .shows {
@@ -554,7 +553,6 @@ a {
   }
 }
 .shows__content {
-  width: 20rem;
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
@@ -600,12 +598,12 @@ a {
   .shows__label-date, .shows__lable-location, .shows__lable-venue {
     padding: 0;
     padding-left: 1rem;
-    width: 12rem;
+    width: 12.5rem;
   }
 }
 @media (min-width: 1280px) {
   .shows__label-date, .shows__lable-location, .shows__lable-venue {
-    width: 13rem;
+    width: 14.5rem;
   }
 }
 .shows__lable-venue {
@@ -614,7 +612,7 @@ a {
 @media (min-width: 768px) {
   .shows__lable-venue {
     padding: 0;
-    width: 10rem;
+    width: 9.5rem;
   }
 }
 @media (min-width: 1280px) {

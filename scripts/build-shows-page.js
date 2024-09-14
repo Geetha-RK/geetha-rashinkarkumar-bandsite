@@ -21,13 +21,15 @@ function adjustWindowSize(shows) {
     function convertTimestampToDateString(timestamp) {
         const date = new Date(timestamp);
 
-        const options = {
-            weekday: 'short', 
-            year: 'numeric',  
-            month: 'short',    
-            day: 'numeric'    
-        };
-        return date.toLocaleDateString('en-US', options);
+        const weekdayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    
+        const weekday = weekdayNames[date.getDay()];
+        const month = monthNames[date.getMonth()];
+        const day = date.getDate().toString().padStart(2, '0'); 
+        const year = date.getFullYear();
+    
+        return `${weekday} ${month} ${day} ${year}`;
     }
 
     const showsTitle = document.createElement("div");

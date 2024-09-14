@@ -57,7 +57,21 @@
         <section class="conversation">
             <h1 class="conversation__title">Join the Conversation</h1>
             <form class="form">
-                
+                <div class="form__partition">
+                    <div class="form__avatar">
+                        <img class="form__img" src="./assets/images/Mohan-muruge.jpg" alt="avatar image">
+                    </div>
+                    <div class="form__table">
+                        <label class="form__namelable" for="form__name-id">NAME</label>
+                        <input class="form__name" type="text" id="form__name-id" name="reviewerName" placeholder="Enter your name">
+                        
+                        <label class="form__commentLable" for="form__comment-id">COMMENT</label>
+                        <textarea class="form__comment" id="form__comment-id" name="formComment" placeholder="Add a new comment"></textarea>
+                        
+                        <button class="form__button" type="submit">COMMENT</button>
+                    </div>
+                </div>
+                <hr class="form__border">
             </form>
             <article class="comment">
             </article>

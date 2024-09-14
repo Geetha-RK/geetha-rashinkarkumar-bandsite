@@ -1,74 +1,73 @@
 
 
-const formEl=document.querySelector(".form");   
+// const formEl=document.querySelector(".form");   
 const apiKey = "aedc5d1c-c5a5-46ea-acbc-70154d20e5ef";
 const bandSiteApi = new BandSiteApi(apiKey); 
 let reviews = [];
+const formEl=document.querySelector(".form");  
+    // const partition = document.createElement("div");
+    // partition.classList.add("form__partition");
+    // formEl.appendChild(partition);
 
-    const partition = document.createElement("div");
-    partition.classList.add("form__partition");
-    formEl.appendChild(partition);
+    // const formAvatar = document.createElement("div");
+    // formAvatar.classList.add("form__avatar");
+    // partition.appendChild(formAvatar);
+    // const formAvatar =document.querySelector(".form__avatar");
+    // const formImg = document.createElement("img");
+    // formImg.classList.add("form__img");
+    // const imageUrl = "./assets/images/Mohan-muruge.jpg";
+    // if(imageUrl){
+    //     formImg.src=imageUrl;          
 
-    const formAvatar = document.createElement("div");
-    formAvatar.classList.add("form__avatar");
-    partition.appendChild(formAvatar);
+    // }else{
+    //     img.style.display='none';
 
-    const formImg = document.createElement("img");
-    formImg.classList.add("form__img");
-    const imageUrl = "./assets/images/Mohan-muruge.jpg";
+    // }
 
-    if(imageUrl){
-        formImg.src=imageUrl;          
+    // formImg.alt="avatar image";
+    // formAvatar.appendChild(formImg); 
 
-    }else{
-        img.style.display='none';
+    // const formTable = document.createElement("div");
+    // formTable.classList.add("form__table");
+    // partition.appendChild(formTable);
 
-    }
+    // const nameLable=document.createElement("lable");
+    // nameLable.classList.add('form__namelable');
+    // nameLable.setAttribute("for","form__name-id");
+    // nameLable.textContent="NAME";
+    // formTable.appendChild(nameLable);
 
-    formImg.alt="avatar image";
-    formAvatar.appendChild(formImg); 
+    // const cName=document.createElement("input");
+    // cName.classList.add("form__name")
+    // cName.type="text";
+    // cName.id="form__name-id";
+    // cName.name="reviewerName";
+    // cName.placeholder="Enter your name";
+    // formTable.appendChild(cName);    
 
-    const formTable = document.createElement("div");
-    formTable.classList.add("form__table");
-    partition.appendChild(formTable);
+    // const commentLable=document.createElement("lable");
+    // commentLable.classList.add('form__commentLable');
+    // commentLable.setAttribute("for","form__comment-id");
+    // commentLable.textContent="COMMENT";
+    // formTable.appendChild(commentLable);
 
-    const nameLable=document.createElement("lable");
-    nameLable.classList.add('form__namelable');
-    nameLable.setAttribute("for","form__name-id");
-    nameLable.textContent="NAME";
-    formTable.appendChild(nameLable);
+    // const comment=document.createElement("textarea");
+    // comment.classList.add("form__comment")
+    // comment.type="text";
+    // comment.id="form__comment-id";
+    // comment.name="formComment";
+    // comment.placeholder="Add a new comment";
+    // formTable.appendChild(comment);
 
-    const cName=document.createElement("input");
-    cName.classList.add("form__name")
-    cName.type="text";
-    cName.id="form__name-id";
-    cName.name="reviewerName";
-    cName.placeholder="Enter your name";
-    formTable.appendChild(cName);    
+    // const button=document.createElement('button');
+    // button.classList.add('form__button');
+    // button.type="submit";
+    // button.textContent="COMMENT";
+    // formTable.appendChild(button);
 
-    const commentLable=document.createElement("lable");
-    commentLable.classList.add('form__commentLable');
-    commentLable.setAttribute("for","form__comment-id");
-    commentLable.textContent="COMMENT";
-    formTable.appendChild(commentLable);
-
-    const comment=document.createElement("textarea");
-    comment.classList.add("form__comment")
-    comment.type="text";
-    comment.id="form__comment-id";
-    comment.name="formComment";
-    comment.placeholder="Add a new comment";
-    formTable.appendChild(comment);
-
-    const button=document.createElement('button');
-    button.classList.add('form__button');
-    button.type="submit";
-    button.textContent="COMMENT";
-    formTable.appendChild(button);
-
-    const hrborder = document.createElement("hr");
-    hrborder.classList.add("form__border");
-    formEl.appendChild(hrborder);
+    // const hrborder = document.createElement("hr");
+    // hrborder.classList.add("form__border");
+    // formEl.appendChild(hrborder);
 
     const commentSection = document.querySelector(".comment-section");
 
@@ -128,12 +127,10 @@ let reviews = [];
                 try{
                     reviews = await bandSiteApi.getComments();
                     console.log('Comments here:', reviews);
-                        const sortedReviews = reviews.sort((a, b) => b.timestamp - a.timestamp);
-                    // sortedReviews.slice(0, 3).forEach((review) => {  
+                        const sortedReviews = reviews.sort((a, b) => b.timestamp - a.timestamp); 
                         sortedReviews.forEach((review) => {   
                         displayComment(review);
                     });
-
                 }catch (error) {
                     console.error('An error occurred in reviews comments:', error);
                 }

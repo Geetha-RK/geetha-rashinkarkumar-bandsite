@@ -1,75 +1,10 @@
-
-
-// const formEl=document.querySelector(".form");   
+ 
 const apiKey = "aedc5d1c-c5a5-46ea-acbc-70154d20e5ef";
 const bandSiteApi = new BandSiteApi(apiKey); 
 let reviews = [];
-const formEl=document.querySelector(".form");  
-    // const partition = document.createElement("div");
-    // partition.classList.add("form__partition");
-    // formEl.appendChild(partition);
+const formEl=document.querySelector(".form");    
 
-    // const formAvatar = document.createElement("div");
-    // formAvatar.classList.add("form__avatar");
-    // partition.appendChild(formAvatar);
-    // const formAvatar =document.querySelector(".form__avatar");
-    // const formImg = document.createElement("img");
-    // formImg.classList.add("form__img");
-    // const imageUrl = "./assets/images/Mohan-muruge.jpg";
-    // if(imageUrl){
-    //     formImg.src=imageUrl;          
-
-    // }else{
-    //     img.style.display='none';
-
-    // }
-
-    // formImg.alt="avatar image";
-    // formAvatar.appendChild(formImg); 
-
-    // const formTable = document.createElement("div");
-    // formTable.classList.add("form__table");
-    // partition.appendChild(formTable);
-
-    // const nameLable=document.createElement("lable");
-    // nameLable.classList.add('form__namelable');
-    // nameLable.setAttribute("for","form__name-id");
-    // nameLable.textContent="NAME";
-    // formTable.appendChild(nameLable);
-
-    // const cName=document.createElement("input");
-    // cName.classList.add("form__name")
-    // cName.type="text";
-    // cName.id="form__name-id";
-    // cName.name="reviewerName";
-    // cName.placeholder="Enter your name";
-    // formTable.appendChild(cName);    
-
-    // const commentLable=document.createElement("lable");
-    // commentLable.classList.add('form__commentLable');
-    // commentLable.setAttribute("for","form__comment-id");
-    // commentLable.textContent="COMMENT";
-    // formTable.appendChild(commentLable);
-
-    // const comment=document.createElement("textarea");
-    // comment.classList.add("form__comment")
-    // comment.type="text";
-    // comment.id="form__comment-id";
-    // comment.name="formComment";
-    // comment.placeholder="Add a new comment";
-    // formTable.appendChild(comment);
-
-    // const button=document.createElement('button');
-    // button.classList.add('form__button');
-    // button.type="submit";
-    // button.textContent="COMMENT";
-    // formTable.appendChild(button);
-
-    // const hrborder = document.createElement("hr");
-    // hrborder.classList.add("form__border");
-    // formEl.appendChild(hrborder);
-
-    const commentSection = document.querySelector(".comment-section");
+const commentSection = document.querySelector(".comment-section");
 
     formEl.addEventListener("submit",async (event)=>{
         event.preventDefault();
@@ -160,7 +95,6 @@ const formEl=document.querySelector(".form");
              img.style.display='none';
 
         }
-
         img.alt="avatar image";
         avatar.appendChild(img); 
        
@@ -186,8 +120,63 @@ const formEl=document.querySelector(".form");
         commentText.classList.add("comment__text");
         commentText.innerText = review.comment;
         main.appendChild(commentText);
+        
+        const likeCount = document.createElement("p");
+        likeCount.classList.add("comment__like-count");
+        likeCount.textContent = 'Likes : 0'
+        main.appendChild(likeCount); 
+
+        const buttons = document.createElement("div");
+        buttons.classList.add("comment__buttons");
+        main.appendChild(buttons);
+
+        const likeButton = document.createElement('button');
+        likeButton.classList.add("comment__like-button");
+        likeButton.type="click";
+        likeButton.textContent = 'Like';
+        buttons.appendChild(likeButton);   
+
+        likeButton.addEventListener("click",()=>{          
+
+            async function postlikes(reviewId) {  
+                try{
+                    let response = await bandSiteApi.likeComment(reviewId,(review.likes+1));
+
+                    if (response.likes !== undefined) {
+                        likeCount.textContent = `Likes: ${response.likes}`;
+                    }
+                    }catch(error) {
+                    console.error('An error comments:', error);
+                }
+            }
+            postlikes(review.id);
+        });
+
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add("comment__like-button");
+        deleteButton.type="click";
+        deleteButton.textContent = 'Delete';
+        buttons.appendChild(deleteButton); 
+
+        deleteButton.addEventListener("click",()=>{
+            async function deleteComment(reviewId){
+                console.log("Record to be deleted:",reviewId);
+                try{
+                    await bandSiteApi.deleteComment(reviewId);
+                    display();
+                }catch(error){
+                    console.error('An error delete:', error);
+                }
+            }
+            deleteComment(review.id);
+        });
 
         const hrborder = document.createElement("hr");
         hrborder.classList.add("commment__border");
         displayEl.appendChild(hrborder);
     }
+
+
+   
+
+    

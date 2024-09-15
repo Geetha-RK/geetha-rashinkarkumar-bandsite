@@ -517,7 +517,28 @@ a{
       width:92%
     }
   }
+  &__buttons{
+    display:flex;
+    justify-content: space-between;
+  }
+  &__like-button{
+    width:30%;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    border-radius: 4px;
+    height:2.5rem;
+    background-color: $bandsite-black;
+    text-transform: uppercase;
+    @include font-style('Avenir',16px,600,20px,$white);
 
+    &:hover{
+      background-color: $bandsite-darkblack;
+    }
+  }
+  &__like-count{
+    @include font-style('Avenir',16px,600,20px,$mercury);
+    
+  }
   &__head{
     display: flex;
     justify-content: space-between;

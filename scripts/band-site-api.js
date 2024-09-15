@@ -39,5 +39,43 @@ class BandSiteApi {
                 }
         }
     }
+
+    async likeComment(commentId){
+       try{
+        // console.log('commentId received:',commentId, likecount);
+        const response = await axios.put(`${this.baseURL}/comments/${commentId}/like?api_key=${this.apiKey}`);
+        
+        return response.data;
+       }catch(error){
+            if (error.response && error.response.status === 404) {
+            console.error('Comment not found: Ensure the comment ID is correct.');
+            }
+            else if (error.response && error.response.status === 400) 
+            {
+             console.error('Bad Request: Missing required fields.');
+            } 
+            else {
+             console.log(`Put like comments request failed: ${error}`);
+            }
+       }
+    }
+
+    async deleteComment(commentId){
+        try{
+            const response = await axios.delete(`${this.baseURL}/comments/${commentId}?api_key=${this.apiKey}`)
+            return response.data;
+        }catch(error){
+            if (error.response && error.response.status === 404) {
+                console.error('Comment not found: Ensure the comment ID is correct.');
+                }
+                else if (error.response && error.response.status === 400) 
+                {
+                 console.error('Bad Request: Missing required fields.');
+                } 
+                else {
+                 console.log(`Delete comments request failed: ${error}`);
+                }
+        }
+    }
 };
 

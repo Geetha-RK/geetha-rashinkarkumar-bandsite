@@ -1020,6 +1020,34 @@ a {
     width: 92%;
   }
 }
+.comment__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.comment__like-button {
+  width: 30%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  height: 2.5rem;
+  background-color: #323232;
+  text-transform: uppercase;
+  font-family: "Avenir";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.comment__like-button:hover {
+  background-color: #000000;
+}
+.comment__like-count {
+  font-family: "Avenir";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #E1E1E1;
+}
 .comment__head {
   display: flex;
   justify-content: space-between;
